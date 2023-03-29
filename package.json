@@ -1,0 +1,20 @@
+{
+  "name": "nuxt-app",
+  "private": true,
+  "scripts": {
+    "build": "nuxt build",
+    "dev": "nuxt dev",
+    "generate": "nuxt generate",
+    "preview": "nuxt preview",
+    "postinstall": "nuxt prepare"
+  },
+  "devDependencies": {
+    "@nuxtjs/tailwindcss": "^6.6.5",
+    "@storefront-ui/vue": "^2.0.0",
+    "nuxt": "^3.3.2"
+  },
+  "dependencies": {
+    "@kodadot1/minipfs": "^0.2.1-rc.0",
+    "@kodadot1/uniquery": "^0.2.2-rc.0"
+  }
+}
