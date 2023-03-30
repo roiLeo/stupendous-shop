@@ -2,14 +2,14 @@
 	<div class="flex flex-col justify-center mx-auto h-full max-w-[1536px] w-full p-4 md:px-10">
 		<!-- BREADCRUMB HERE -->
 		<div>
-			<SfButton type="button" tag="a" href="/" :variant="SfButtonVariant.secondary">
+			<SfButton type="button" :tag="NuxtLink" to="/" :variant="SfButtonVariant.secondary">
 				<template #prefix>
-	        		<SfIconArrowBack />
-	      		</template>
-				Retour à la liste 
+          <SfIconArrowBack />
+        </template>
+				Back to list
 			</SfButton>
 		</div>
-		{{ item }}
+		<!-- {{ item }} -->
 
 		<ProductCardDetails :item="item" />
 	</div>
@@ -18,6 +18,9 @@
 <script setup lang="ts">
 import { SfButton, SfButtonVariant, SfIconArrowBack } from '@storefront-ui/vue'
 import { getClient, extendFields } from '@kodadot1/uniquery'
+import { resolveComponent } from 'vue'
+
+const NuxtLink = resolveComponent('NuxtLink')
 
 const route = useRoute()
 const id = computed(() => route.params.id)

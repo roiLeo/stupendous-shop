@@ -7,7 +7,7 @@
 		</form>
 
 		<!-- {{ items }} -->
-		<div class="grid grid-cols-4 gap-4 md:grid-cols-6">
+		<div class="grid lg:grid-cols-6 md:grid-cols-4 xs:grid-cols-2 gap-4">
 			<ProductCard v-for="item in items" :key="item.id" :item="item" />
 		</div>
 	</div>

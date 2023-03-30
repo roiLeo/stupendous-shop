@@ -1,5 +1,6 @@
 {
-  "name": "nuxt-app",
+  "name": "bsx-shop",
+  "description": "Custom Basilisk marketplace",
   "private": true,
   "scripts": {
     "build": "nuxt build",

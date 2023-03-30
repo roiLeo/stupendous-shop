@@ -1,13 +1,13 @@
 <template>
 	<div class="w-11/12 max-w-5xl mx-auto mt-8 lg:grid lg:grid-cols-2 lg:gap-x-16">
-		<div
-			 class="w-full bg-white rounded-xl border-2 border-gray-200 mt-12 lg:mt-0 lg:col-start-1 lg:row-span-2 lg:self-start">
+		<div class="w-full bg-white rounded-xl border-2 border-gray-200 mt-12 lg:mt-0 lg:col-start-1 lg:row-span-2 lg:self-start">
 			<div class="rounded-lg overflow-hidden">
-				<img :src="image"
-					 :alt="item.name"
-					 width="400"
-					 height="400"
-					 class="w-full h-full object-center object-contain" />
+				<img class="w-full h-full object-center object-contain"
+          :src="image"
+          :alt="item.name"
+          width="400"
+          height="400"
+				/>
 			</div>
 		</div>
 		<div>
@@ -17,15 +17,20 @@
 						<h2 class="text-xl lg:!text-2xl font-semibold text-gray-800">
 							{{ item.name }}
 						</h2>
-						<h3 class="text-gray-500 text-base leading-tight"
-							v-if="item.currentOwner">
+						<h3 class="text-gray-500 text-base leading-tight" v-if="item.currentOwner">
 							Owned by
 							<a class="text-blue-500 hover:underline"
 							   target="_blank"
 							   :href="`https://beta.kodadot.xyz/bsx/u/${item.currentOwner}`">
-								{{ item.currentOwner }}
+								{{ shortAddress(item.currentOwner) }}
 							</a>
 						</h3>
+            <div class="mt-2 text-gray-400">
+              <SfTooltip :label="new Date(item.createdAt).toLocaleDateString()">
+                <time><SfIconCalendarToday size="sm" /> Minted {{ timeAgo(item.createdAt) }} ago</time>
+              </SfTooltip>
+            </div>
+
 					</hgroup>
 
 					<SfChip class="text-gray-600">
@@ -35,7 +40,7 @@
 								$
 							</SfThumbnail>
 						</template>
-						{{ 420 }}
+						{{ price || 420 }}
 					</SfChip>
 				</div>
 			</div>
@@ -53,7 +58,7 @@
 </template>
 
 <script lang="ts" setup>
-import { SfChip, SfThumbnail } from '@storefront-ui/vue'
+import { SfChip, SfThumbnail, SfTooltip, SfIconCalendarToday } from '@storefront-ui/vue'
 
 const props = defineProps(['item'])
 // const metadata = useSanitizeUri(props.item.metadata)
