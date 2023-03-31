@@ -22,13 +22,13 @@
         {{ item.name }}
       </SfLink>
 
-			<div class="flex items-center pt-1">
+			<!-- <div class="flex items-center pt-1">
 				<SfRating size="xs" :value="5" :max="5" />
 
 				<SfLink :tag="NuxtLink" :to="`/products/${item.id}`" variant="secondary" class="pl-1 no-underline">
 					<SfCounter size="xs">123</SfCounter>
 				</SfLink>
-			</div>
+			</div> -->
 
 			<p class="block py-2 font-normal leading-5 typography-text-sm text-neutral-700">
 				{{ description }}
