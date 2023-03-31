@@ -15,24 +15,17 @@
 
 <script setup lang="ts">
 import { SfInput, SfIconSearch } from '@storefront-ui/vue'
-import { extendFields, getClient } from '@kodadot1/uniquery'
+import { useProductsStore } from '@/stores/products'
 
-// 945672150
-const inputCollectionId = ref('')
+const productsStore = useProductsStore()
+const inputCollectionId = ref('') // 945672150
 
-const fetchBsxCollection = async (collectionId?: string) => {
-	const client = getClient('bsx')
-	const query = client.itemListByCollectionId(collectionId || '1825819407', {
-		fields: extendFields(['meta', 'price']),
-		orderBy: 'createdAt_ASC',
-	})
-	const { data } = await client.fetch(query)
-	return data.items
-}
+await useAsyncData('products', () => productsStore.fetchItems())
 
-const items = ref(await fetchBsxCollection())
+const items = computed(() => productsStore.getItems)
 
 const submitInput = async () => {
-	items.value = await fetchBsxCollection(inputCollectionId.value)
+  productsStore.setCollectionId(inputCollectionId.value)
+  await useAsyncData('products', () => productsStore.fetchItems())
 }
 </script>
