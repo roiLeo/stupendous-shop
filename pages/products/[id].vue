@@ -2,7 +2,7 @@
 	<div class="flex flex-col justify-center mx-auto h-full max-w-[1536px] w-full p-4 md:px-10">
 		<!-- BREADCRUMB HERE -->
 		<div>
-			<SfButton type="button" :tag="NuxtLink" to="/" :variant="SfButtonVariant.secondary">
+			<SfButton type="button" :tag="NuxtLink" to="/" :variant="SfButtonVariant.tertiary">
 				<template #prefix>
           <SfIconArrowBack />
         </template>

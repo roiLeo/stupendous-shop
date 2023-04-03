@@ -11,26 +11,17 @@
 			</div>
 		</div>
 		<div>
-			<div class="flex flex-col gap-4 pt-4 lg:pt-0">
+			<div class="flex flex-col gap-4 py-4 lg:pt-0">
 				<div class="w-full flex items-center justify-between gap-4">
 					<hgroup>
 						<h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
 							{{ item.name }}
 						</h1>
-						<h2 class="text-gray-500 text-base leading-tight mt-2" v-if="item.currentOwner">
-							Owned by
-							<a class="text-blue-500 hover:underline"
-							   target="_blank"
-							   :href="`https://beta.kodadot.xyz/bsx/u/${item.currentOwner}`">
-								{{ shortAddress(item.currentOwner) }}
-							</a>
-						</h2>
             <div class="mt-2 text-gray-400">
               <SfTooltip :label="new Date(item.createdAt).toLocaleDateString()">
                 <time><SfIconCalendarToday size="sm" /> Minted {{ timeAgo(item.createdAt) }} ago</time>
               </SfTooltip>
             </div>
-
 					</hgroup>
 
 					<SfChip class="text-gray-600">
@@ -45,21 +36,45 @@
 				</div>
 			</div>
 
-			<section class="mt-12 pt-6">
-				<hr class="border-1 border-gray-200">
-				<div class="mt-4 space-y-6">
-					<p class="text-base text-gray-600">
-						{{ description }}
-					</p>
-				</div>
-			</section>
+      <div class="my-8 text-sm grid gap-2">
+        <div class="flex gap-2 items-center" v-if="item.currentOwner">
+          <span class="text-gray-400">Owner: </span>
+          <span>
+            <a class="text-blue-500 hover:underline"
+                target="_blank"
+                :href="`https://beta.kodadot.xyz/bsx/u/${item.currentOwner}`">
+              {{ shortAddress(item.currentOwner) }}
+            </a>
+          </span>
+        </div>
+        <div class="flex gap-2 items-center">
+          <span class="text-gray-400">Availability: </span>
+          <span class="text-green-600">In Stock</span>
+        </div>
+        <div class="flex gap-2 items-center">
+          <span class="text-gray-400">ID: </span>
+          <span>{{ item.id }}</span>
+        </div>
+      </div>
 
-      <SfButton type="button" size="lg" class="w-full" >
+      <div class="mt-4 mb-8 space-y-6 font-light prose">
+        {{ description }}
+      </div>
+
+      <hr class="border-1 border-gray-200">
+
+      <SfButton type="button" size="lg" class="w-full my-12">
         <template #prefix>
           <SfIconShoppingCart size="sm" />
         </template>
         Add to cart
       </SfButton>
+
+      <hr class="border-1 border-gray-200">
+
+      <div class="flex flex-wrap gap-4">
+        <ShareButtons :product="item" />
+      </div>
 		</div>
 	</div>
 </template>
@@ -68,9 +83,9 @@
 import { SfChip, SfIconShoppingCart, SfButton, SfThumbnail, SfTooltip, SfIconCalendarToday } from '@storefront-ui/vue'
 
 const props = defineProps(['item'])
-// const metadata = useSanitizeUri(props.item.metadata)
 const image = useSanitizeUri(props.item.meta?.image)
 const price = ref(props.item.meta?.price)
 const description = ref(props.item.meta?.description)
+// const metadata = useSanitizeUri(props.item.metadata)
 // const hasOwner = ref(props.item.currentOwner)
 </script>

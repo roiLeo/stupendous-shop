@@ -8,14 +8,11 @@
           :width="300"
           :height="300" />
 			</SfLink>
-			<SfButton class="absolute bottom-0 right-0 mr-2 mb-2 bg-white border border-neutral-200 !rounded-full"
-        type="button"
-        variant="tertiary"
-        size="sm"
-        square
-        aria-label="Add to wishlist">
-				<SfIconFavorite size="sm" />
-			</SfButton>
+
+      <WishlistButton
+        :product="item"
+        class="absolute bottom-0 right-0 mr-2 mb-2 bg-white border border-neutral-200 !rounded-full"
+      />
 		</div>
 		<div class="p-4 border-t border-neutral-200">
 			<SfLink :tag="NuxtLink" :to="`/products/${item.id}`" variant="secondary" class="no-underline">

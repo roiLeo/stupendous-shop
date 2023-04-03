@@ -1,9 +1,9 @@
 <template>
 	<footer class="flex flex-col justify-center mx-auto w-full">
-		<hr class="w-full border-1 border-gray-600 mb-8" />
+		<hr class="w-full border-1 border-gray-400 mb-4" />
 
-		<div class="px-5 pb-10">
-			<div class="container max-w-lg mx-auto text-center text-gray-700">
+		<div class="px-5 pb-8">
+			<div class="container max-w-lg mx-auto text-center text-gray-500 text-sm">
 				<p class="mb-3 font-semibold">
 					© {{ new Date().getFullYear() }}
 					roiLeo. All rights reserved.
