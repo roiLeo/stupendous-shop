@@ -22,8 +22,6 @@
 const { locales, locale, setLocaleCookie } = useI18n()
 
 watch(locale, (newLocale) => {
-  console.log(locale.value)
-  console.log(newLocale)
   setLocaleCookie(newLocale)
 })
 </script>
