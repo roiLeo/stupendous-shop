@@ -1,0 +1,15 @@
+{
+  "pages": {
+    "home": "Home",
+    "wishlist": "Wishlist",
+    "cart": "Your cart"
+  },
+  "action": {
+    "checkout": "Checkout",
+    "login": "Log in"
+  },
+  "messages": {
+    "close_drawer": "You can close Drawer by clicking outside or focus and use ESC button",
+    "empty_wishlist": "You have no items in your wishlist"
+  }
+}

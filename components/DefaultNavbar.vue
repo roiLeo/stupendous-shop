@@ -6,10 +6,11 @@
           <template #prefix>
             <SfIconHome />
           </template>
-          <span class="hidden md:inline-flex">Home</span>
+          <span class="hidden md:inline-flex">{{ $t('pages.home') }}</span>
         </SfButton>
         <nav>
           <div class="flex flex-row flex-nowrap">
+            <LocaleSwitcher class="mr-5" />
             <ShoppingCart />
             <NuxtLink to="/wishlist">
               <SfButton
@@ -31,7 +32,7 @@
               <template #prefix>
                 <Component :is="actionItems[0].icon" />
               </template>
-              Log in
+              {{ $t('action.login') }}
             </SfButton>
           </div>
         </nav>

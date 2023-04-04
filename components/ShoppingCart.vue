@@ -25,7 +25,7 @@
     >
       <header class="flex items-center justify-between px-8 py-5">
         <div class="flex items-center">
-          <SfIconShoppingCartCheckout class="mr-4" /> Your cart
+          <SfIconShoppingCartCheckout class="mr-4" /> {{ $t('pages.cart') }}
         </div>
         <SfButton square variant="tertiary" @click="open = false">
           <SfIconClose />
@@ -47,7 +47,7 @@
 
 
       <div class="p-8">
-        <SfIconHelp size="xs" /> <strong>You can close Drawer by clicking outside or focus and use ESC button</strong>
+        <SfIconHelp size="xs" /> <strong>{{ $t('messages.close_drawer') }}</strong>
       </div>
 
       <div class="mb-8 px-8">
@@ -55,7 +55,7 @@
           <template #prefix>
             <SfIconShoppingCart size="sm" />
           </template>
-          Checkout {{ 420 }} €
+          {{ $t('action.checkout') }} {{ 420 }} €
         </SfButton>
       </div>
     </SfDrawer>
