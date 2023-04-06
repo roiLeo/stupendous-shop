@@ -1,3 +1,5 @@
+import { encodeAddress } from '@polkadot/util-crypto'
+
 export function timeAgo(date: string) {
 	const time = Date.parse(date)
 	const between = Date.now() / 1000 - Number(time) / 1000
@@ -18,10 +20,13 @@ export function pluralize(time: number, label: string) {
 	return `${time + label}s`
 }
 
-
 export function shortAddress(address: string, begin?: number, end?: number): string {
 	begin = begin || 6
 	end = end || -6
 
 	return `${address.slice(0, begin)}...${address.slice(end)}`
+}
+
+export function formatAddress(address: string, ss58Format: number) {
+  return encodeAddress(address, ss58Format);
 }
