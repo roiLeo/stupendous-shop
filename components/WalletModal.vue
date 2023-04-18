@@ -144,7 +144,7 @@
 						class="my-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2 form-select appearance-none block"
             v-model="account"
 					>
-						<option selected>Select an account</option>
+						<option selected disabled>Select an account</option>
 						<option
 							v-for="option in walletAccounts"
 							:key="option.address"
