@@ -31,8 +31,6 @@ export const useWishlistStore = defineStore('wishlist', {
       localStorage.setItem('wishlist', JSON.stringify(this.wishlist))
     },
 
-
-
     fetchWishlist() {
       const wishlist = localStorage.getItem('wishlist')
       if (wishlist) this.wishlist = JSON.parse(wishlist)

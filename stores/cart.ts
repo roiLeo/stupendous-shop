@@ -4,7 +4,7 @@ interface State {
   error: any
 }
 
-export const useCart = defineStore('cart', {
+export const useCartStore = defineStore('cart', {
   state: (): State => ({
     cart: [],
     loading: true,

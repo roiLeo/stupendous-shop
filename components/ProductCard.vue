@@ -35,7 +35,7 @@
 				<template #prefix>
 					<SfIconShoppingCart size="sm" />
 				</template>
-				Add to cart
+				{{ $t('action.add_to_cart') }}
 			</SfButton>
 		</div>
 	</div>

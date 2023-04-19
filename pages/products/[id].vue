@@ -6,10 +6,9 @@
 				<template #prefix>
           <SfIconArrowBack />
         </template>
-				Back to list
+				{{ $t('action.back_to_list') }}
 			</SfButton>
 		</div>
-		<!-- {{ item }} -->
 
 		<ProductCardDetails :item="item" />
 	</div>

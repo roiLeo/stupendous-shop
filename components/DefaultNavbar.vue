@@ -24,33 +24,19 @@
               </SfButton>
             </NuxtLink>
 
-            <SfButton
-              class="hidden lg:inline-flex mr-2 -ml-0.5 text-primary-700 hover:bg-primary-100 active:bg-primary-200 hover:text-primary-600 active:text-primary-700"
-              :aria-label="actionItems[0].ariaLabel"
-              variant="tertiary"
-            >
-              <template #prefix>
-                <Component :is="actionItems[0].icon" />
-              </template>
-              {{ $t('action.login') }}
-            </SfButton>
+            <ConnectWalletButton v-if="account === '' || !account" />
+            <ProfileDropdownButton v-else />
           </div>
         </nav>
       </div>
     </header>
   </div>
 </template>
+
 <script lang="ts" setup>
-import { SfButton, SfIconFavorite, SfIconPerson, SfIconHome } from '@storefront-ui/vue'
+import { SfButton, SfIconFavorite, SfIconHome } from '@storefront-ui/vue'
 import { resolveComponent } from 'vue'
 
 const NuxtLink = resolveComponent('NuxtLink')
-
-const actionItems = [
-  {
-    label: 'Log in',
-    icon: SfIconPerson,
-    ariaLabel: 'Log in',
-  },
-]
+const { account, setAccount } = useConnectWallet()
 </script>
