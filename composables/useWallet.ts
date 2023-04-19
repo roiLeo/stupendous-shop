@@ -36,18 +36,19 @@ export const useConnectWallet = () => {
     })
   }
 
-  const setAccount = (address: string) => {
-    accountStore.setAccount(address)
-    isWalletModalOpen.value = false // todo: close modal
-  }
+  const account = computed(() => accountStore.getAccount)
 
   const resetAccount = () => accountStore.resetAccount()
+
+  const setAccount = (address: string) => {
+    accountStore.setAccount(address)
+    toggleWalletModal()
+  }
 
   // const account = computed({
   //   get: () => accountStore.getAccount,
   //   set: (address: string) => accountStore.setAccount(address)
   // })
-  const account = computed(() => accountStore.getAccount)
 
 	return {
     account,
