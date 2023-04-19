@@ -142,7 +142,8 @@
 					<!-- Wallet accounts -->
 					<select
 						class="my-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2 form-select appearance-none block"
-            v-model="account"
+            v-model="selectedAccount"
+            @change="setAccount(selectedAccount)"
 					>
 						<option selected disabled>Select an account</option>
 						<option
@@ -165,6 +166,7 @@ import { SupportedWallets, Wallet, WalletAccount } from '@/utils/wallets'
 
 const {
   account,
+  setAccount,
   wallets,
   selectedWalletProvider,
   setWallet,
@@ -173,6 +175,8 @@ const {
   hasWalletProviderExtension,
   walletAccounts
 } = useConnectWallet()
+
+const selectedAccount = ref('')
 
 watchEffect(() => {
 	// wallets.value = SupportedWallets.map((wallet) => {

@@ -26,7 +26,6 @@
 
             <ConnectWalletButton v-if="account === '' || !account" />
             <ProfileDropdownButton v-else />
-
           </div>
         </nav>
       </div>
@@ -39,9 +38,5 @@ import { SfButton, SfIconFavorite, SfIconHome } from '@storefront-ui/vue'
 import { resolveComponent } from 'vue'
 
 const NuxtLink = resolveComponent('NuxtLink')
-const { account } = useConnectWallet()
-
-watch(account, (account) => {
-  console.log(account)
-})
+const { account, setAccount } = useConnectWallet()
 </script>

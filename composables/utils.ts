@@ -1,4 +1,5 @@
 import { encodeAddress } from '@polkadot/util-crypto'
+import { formatBalance } from '@polkadot/util'
 
 export function timeAgo(date: string) {
 	const time = Date.parse(date)
@@ -28,5 +29,21 @@ export function shortAddress(address: string, begin?: number, end?: number): str
 }
 
 export function formatAddress(address: string, ss58Format: number) {
-  return encodeAddress(address, ss58Format);
+  return encodeAddress(address, ss58Format)
+}
+
+export function formatPrice(price?: bigint | string) {
+  const value = BigInt(price || BigInt(0))
+  const magic = formatBalance(value, {
+    decimals: 12,
+    forceUnit: '-',
+    withZero: false,
+    withUnit: false,
+  })
+  const intl = new Intl.NumberFormat('fr-FR', {
+    style: 'currency',
+    currency: 'KSM',
+    useGrouping: false,
+  })
+  return intl.format(Number(magic)).replace(',', '.')
 }

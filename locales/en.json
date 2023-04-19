@@ -5,11 +5,19 @@
     "cart": "Your cart"
   },
   "action": {
+    "add_to_cart": "Add to cart",
+    "back_to_list": "Back to list",
     "checkout": "Checkout",
     "login": "Log in"
   },
   "messages": {
     "close_drawer": "You can close Drawer by clicking outside or focus and use ESC button",
     "empty_wishlist": "You have no items in your wishlist"
+  },
+  "text": {
+    "availability": "Availability",
+    "available": "In Stock",
+    "unavailable": "Unavailable",
+    "owner": "Owner"
   }
 }

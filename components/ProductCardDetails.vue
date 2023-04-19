@@ -25,20 +25,20 @@
 					</hgroup>
 
 					<SfChip class="text-gray-600">
-						<template #prefix>
+            {{ formatPrice(item.price) || 420 }}
+						<template #suffix>
 							<!-- bg-gradient-to-tr from-[#4ADE80] to-[#A78BFA] -->
 							<SfThumbnail class="bg-gray-600 text-sm text-white leading-5 text-center">
-								$
+								°
 							</SfThumbnail>
 						</template>
-						{{ price || 420 }}
 					</SfChip>
 				</div>
 			</div>
 
       <div class="my-8 text-sm grid gap-2">
         <div class="flex gap-2 items-center" v-if="item.currentOwner">
-          <span class="text-gray-400">Owner: </span>
+          <span class="text-gray-400">{{ $t('text.owner') }}: </span>
           <span>
             <a class="text-blue-500 hover:underline"
                 target="_blank"
@@ -48,8 +48,9 @@
           </span>
         </div>
         <div class="flex gap-2 items-center">
-          <span class="text-gray-400">Availability: </span>
-          <span class="text-green-600">In Stock</span>
+          <span class="text-gray-400">{{ $t('text.availability') }}: </span>
+          <span class="text-red-600" v-if="!isAvailable">{{ $t('text.unavailable') }}</span>
+          <span class="text-green-600" v-else>{{ $t('text.available') }}</span>
         </div>
         <div class="flex gap-2 items-center">
           <span class="text-gray-400">ID: </span>
@@ -63,11 +64,11 @@
 
       <hr class="border-1 border-gray-200">
 
-      <SfButton type="button" size="lg" class="w-full my-12">
+      <SfButton type="button" size="lg" class="w-full my-12" :disabled="!isAvailable">
         <template #prefix>
           <SfIconShoppingCart size="sm" />
         </template>
-        Add to cart
+  				{{ $t('action.add_to_cart') }}
       </SfButton>
 
       <hr class="border-1 border-gray-200">
@@ -84,8 +85,8 @@ import { SfChip, SfIconShoppingCart, SfButton, SfThumbnail, SfTooltip, SfIconCal
 
 const props = defineProps(['item'])
 const image = useSanitizeUri(props.item.meta?.image)
-const price = ref(props.item.meta?.price)
 const description = ref(props.item.meta?.description)
+const isAvailable = ref(props.item.price !== '0')
 // const metadata = useSanitizeUri(props.item.metadata)
 // const hasOwner = ref(props.item.currentOwner)
 </script>

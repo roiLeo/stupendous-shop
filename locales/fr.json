@@ -5,11 +5,19 @@
     "cart": "Votre panier"
   },
   "action": {
+    "add_to_cart": "Ajouter au panier",
+    "back_to_list": "Retour à la liste",
     "checkout": "Payer",
     "login": "Connexion"
   },
   "messages": {
     "close_drawer": "Vous pouvez fermer le menu en cliquant à l'extérieur ou sur le focus et en utilisant le bouton ESC",
     "empty_wishlist": "Vous n'avez aucun article dans votre liste d'envies"
+  },
+  "text": {
+    "availability": "Disponibilité",
+    "available": "En Stock",
+    "unavailable": "Indisponible",
+    "owner": "Propriétaire"
   }
 }

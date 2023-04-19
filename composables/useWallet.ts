@@ -1,6 +1,8 @@
 import { SupportedWallets, Wallet, WalletAccount } from '@/utils/wallets'
+import { useAccountStore } from '@/stores/account'
 
 export const useConnectWallet = () => {
+  const accountStore = useAccountStore()
   const selectedWallet = ref<string>('')
   const hasWalletProviderExtension = ref<boolean>(false)
   const hasSelectedWalletProvider = ref<boolean>(false)
@@ -35,24 +37,21 @@ export const useConnectWallet = () => {
   }
 
   const setAccount = (address: string) => {
-    console.log(address)
-    localStorage.setItem('account', address)
-    isWalletModalOpen.value = false
+    accountStore.setAccount(address)
+    isWalletModalOpen.value = false // todo: close modal
   }
 
-  const resetAccount = () => {
-    console.log('init logout...')
-    localStorage.removeItem('account')
-    account.value = ''
-  }
+  const resetAccount = () => accountStore.resetAccount()
 
-  const account = computed({
-    get: () => localStorage.getItem('account') || '',
-    set: (address: string) => setAccount(address)
-  })
+  // const account = computed({
+  //   get: () => accountStore.getAccount,
+  //   set: (address: string) => accountStore.setAccount(address)
+  // })
+  const account = computed(() => accountStore.getAccount)
 
 	return {
     account,
+    setAccount,
     resetAccount,
     hasWalletProviderExtension,
     hasSelectedWalletProvider,
