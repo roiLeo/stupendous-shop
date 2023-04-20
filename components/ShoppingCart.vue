@@ -33,13 +33,13 @@
       </header>
 
       <ul class="flex flex-col flex-1 p-8 gap-4 overflow-y-scroll">
-        <li class="flex gap-4 items-center">
-          <img class="rounded-lg h-16 w-16" src="https://placehold.co/150x150" alt="Album XYZ #4" title="Album XYZ #4" loading="lazy" width="64" height="64">
+        <li class="flex gap-4 items-center" v-for="item in cart" :key="item.id">
+          <img class="rounded-lg h-16 w-16" :src="useSanitizeUri(item.meta?.image)" :alt="item.name" :title="item.name" loading="lazy" width="64" height="64">
           <div class="flex-1">
-            <div class="leading-tight">Album XYZ #4</div>
-            <div class="flex mt-1 text-xs"><span class="font-semibold">300.00 €</span></div>
+            <div class="leading-tight">{{ item.name }}</div>
+            <div class="flex mt-1 text-xs"><span class="font-semibold">{{ formatPrice(item.price) }}</span></div>
           </div>
-          <SfButton square variant="secondary" @click="open = false">
+          <SfButton square variant="secondary" @click="removeProductFromCart(item)">
             <SfIconDelete />
           </SfButton>
         </li>
@@ -55,7 +55,7 @@
           <template #prefix>
             <SfIconShoppingCart size="sm" />
           </template>
-          {{ $t('action.checkout') }} {{ 420 }} €
+          {{ $t('action.checkout') }} {{ formatPrice(String(total)) }}
         </SfButton>
       </div>
     </SfDrawer>
@@ -64,10 +64,15 @@
 
 <script lang="ts" setup>
 import { SfDrawer, SfDrawerPlacement, SfIconShoppingCart, SfButton, SfIconHelp, SfIconShoppingCartCheckout, SfIconClose, SfIconDelete, useTrapFocus } from '@storefront-ui/vue'
+import { useCartStore } from '@/stores/cart'
 
-const placement = ref<`${SfDrawerPlacement}`>('right')
+const placement = ref<SfDrawerPlacement>(SfDrawerPlacement.right)
 const open = ref(false)
 const drawerRef = ref()
+const cartStore = useCartStore()
+const cart = computed(() => cartStore.cart)
+const total = computed(() => cartStore.getCartTotal)
+const removeProductFromCart = (product: any) => cartStore.removeProductFromCart(product)
 
 useTrapFocus(drawerRef, { activeState: open })
 </script>

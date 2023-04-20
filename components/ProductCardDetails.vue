@@ -24,7 +24,7 @@
             </div>
 					</hgroup>
 
-					<SfChip class="text-gray-600" v-if="item.price > 0">
+					<SfChip class="text-gray-600" v-if="isAvailable">
             {{ formatPrice(item.price) }}
 						<template #suffix>
 							<!-- bg-gradient-to-tr from-[#4ADE80] to-[#A78BFA] -->
@@ -64,7 +64,7 @@
 
       <hr class="border-1 border-gray-200">
 
-      <SfButton type="button" size="lg" class="w-full my-12" :disabled="!isAvailable">
+      <SfButton type="button" size="lg" class="w-full my-12" :disabled="!isAvailable" @click="addToCart()">
         <template #prefix>
           <SfIconShoppingCart size="sm" />
         </template>
@@ -82,11 +82,16 @@
 
 <script lang="ts" setup>
 import { SfChip, SfIconShoppingCart, SfButton, SfThumbnail, SfTooltip, SfIconCalendarToday } from '@storefront-ui/vue'
+import { useCartStore } from '@/stores/cart'
 
 const props = defineProps(['item'])
 const image = useSanitizeUri(props.item.meta?.image)
 const description = ref(props.item.meta?.description)
 const isAvailable = ref(props.item.price !== '0')
-// const metadata = useSanitizeUri(props.item.metadata)
-// const hasOwner = ref(props.item.currentOwner)
+const cartStore = useCartStore()
+
+const addToCart = () => {
+  // todo: toggle notification success
+  cartStore.addToCart(props.item)
+}
 </script>

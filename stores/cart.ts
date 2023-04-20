@@ -11,22 +11,18 @@ export const useCartStore = defineStore('cart', {
     error: null,
   }),
   getters: {
-    getCartQuantity: (state) => state.cart.reduce((total, product: {quantity: number}) => total + product.quantity, 0),
-    getCartTotal: (state) => {
-      const currencySymbol = '€'
-
-      return state.cart.reduce(
-        (total, product) =>
-          total +
-          Number(product.price.replace(currencySymbol, '')) * product.quantity,
-        0
-      )
-    },
+    getCartQuantity: (state) => state.cart.reduce((total) => total, 0),
+    getCartTotal: (state) => state.cart.reduce(
+      (total, product) =>
+        total +
+        Number(product.price) ,
+      0
+    )
   },
   actions: {
     addToCart(product) {
       const foundProductInCartIndex = this.cart.findIndex(
-        (cartproduct) => product.slug === cartproduct.slug
+        (cartproduct) => product.id === cartproduct.id
       )
 
       if (foundProductInCartIndex > -1) {
