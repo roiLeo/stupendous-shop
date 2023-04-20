@@ -24,8 +24,8 @@
             </div>
 					</hgroup>
 
-					<SfChip class="text-gray-600">
-            {{ formatPrice(item.price) || 420 }}
+					<SfChip class="text-gray-600" v-if="item.price > 0">
+            {{ formatPrice(item.price) }}
 						<template #suffix>
 							<!-- bg-gradient-to-tr from-[#4ADE80] to-[#A78BFA] -->
 							<SfThumbnail class="bg-gray-600 text-sm text-white leading-5 text-center">
