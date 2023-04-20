@@ -6,7 +6,8 @@
           :src="image"
           :alt="item.name"
           :width="300"
-          :height="300" />
+          :height="300"
+        />
 			</SfLink>
 
       <WishlistButton
@@ -30,7 +31,7 @@
 			<p class="block py-2 font-normal leading-5 typography-text-sm text-neutral-700">
 				{{ description }}
 			</p>
-			<span class="block pb-2 font-bold typography-text-lg" v-if="price">${{ price }}</span>
+			<span class="block pb-2 font-bold typography-text-lg" v-if="price > 0">{{ formatPrice(price) }}</span>
 			<SfButton type="button" size="sm" v-if="!hasOwner">
 				<template #prefix>
 					<SfIconShoppingCart size="sm" />
@@ -47,9 +48,8 @@ import { resolveComponent } from 'vue'
 
 const NuxtLink = resolveComponent('NuxtLink')
 const props = defineProps(['item'])
-const metadata = useSanitizeUri(props.item.metadata)
 const image = useSanitizeUri(props.item.meta?.image)
-const price = ref(props.item.meta?.price)
+const price = ref(props.item.price)
 const description = ref(props.item.meta?.description)
 const hasOwner = ref(props.item.currentOwner)
 

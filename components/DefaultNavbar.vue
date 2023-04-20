@@ -38,5 +38,5 @@ import { SfButton, SfIconFavorite, SfIconHome } from '@storefront-ui/vue'
 import { resolveComponent } from 'vue'
 
 const NuxtLink = resolveComponent('NuxtLink')
-const { account, setAccount } = useConnectWallet()
+const { account } = useConnectWallet()
 </script>
