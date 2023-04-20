@@ -4,39 +4,40 @@ interface State {
 
 export const useWishlistStore = defineStore('wishlist', {
   state: (): State => ({
-    wishlist: JSON.parse(localStorage.getItem('wishlist') || ''),
-    // wishlist: [],
+    wishlist: [],
   }),
   getters: {
     getWishlist: (state) => state.wishlist,
     isEmpty: (state) => state.wishlist.length === 0,
-    isInList: (state) => (id: string): boolean => {
-      // console.log(this.wishlist)
-      console.log(id)
-      console.log(state.wishlist)
-      return state.wishlist.some((item) => item.id === id)
+    isInList: (state) => (product): boolean => {
+      const foundProductInCartIndex = state.wishlist.findIndex(
+        (wish) => product.id === wish.id
+      )
+      return foundProductInCartIndex > -1
     },
   },
   actions: {
-    addToList(item: any): void {
-      this.wishlist.push(item)
-      localStorage.setItem('wishlist', JSON.stringify(this.wishlist))
-    },
-
-    // to remove from the list
-    removeFromList(id: string): void {
-      this.wishlist = this.wishlist.filter(
-        (item) => item.id !== id
+    addToList(product: any) {
+      const foundProductInListIndex = this.wishlist.findIndex(
+        (item) => product.id === item.id
       )
+
+      if (foundProductInListIndex > -1) {
+        this.wishlist[foundProductInListIndex].quantity += 1
+      } else {
+        product.quantity = 1
+        this.wishlist.push(product)
+      }
+
       localStorage.setItem('wishlist', JSON.stringify(this.wishlist))
     },
 
-    fetchWishlist() {
-      const wishlist = localStorage.getItem('wishlist')
-      if (wishlist) this.wishlist = JSON.parse(wishlist)
+    removeFromList(product) {
+      this.wishlist.splice(this.wishlist.indexOf(product), 1)
+      localStorage.setItem('wishlist', JSON.stringify(this.wishlist))
     },
 
-    getFromLocalStorage(): void {
+    getFromLocalStorage() {
       const wishlist = localStorage.getItem('wishlist')
       console.log(wishlist)
       if (wishlist) this.wishlist = JSON.parse(wishlist)
