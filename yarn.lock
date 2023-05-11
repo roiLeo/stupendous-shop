@@ -454,9 +454,9 @@
   integrity sha512-EvYTiXet5XqweYGClEmpu3BoxmsQ4hkj3QaYA6qEnigCWffTP3vNRwBReTdrwDwo7OoJ3wM8Uoe9Uk4n+d4hfg==
 
 "@floating-ui/dom@^1.2.1":
-  version "1.2.6"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.2.6.tgz#bcf0c7bada97c20d9d1255b889f35bac838c63fe"
-  integrity sha512-02vxFDuvuVPs22iJICacezYJyf7zwwOCWkPNkWNBr1U0Qt1cKFYzWvxts0AmqcOQGwt/3KJWcWIgtbUU38keyw==
+  version "1.2.7"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.2.7.tgz#c123e4db014b07b97e996cd459245fa217049c6b"
+  integrity sha512-DyqylONj1ZaBnzj+uBnVfzdjjCkFCL2aA9ESHLyUOGSqb03RpbLMImP1ekIQXYs4KLk9jAjJfZAU8hXfWSahEg==
   dependencies:
     "@floating-ui/core" "^1.2.6"
 
@@ -1493,32 +1493,32 @@
   resolved "https://registry.yarnpkg.com/@scure/base/-/base-1.1.1.tgz#ebb651ee52ff84f420097055f4bf46cfba403938"
   integrity sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==
 
-"@storefront-ui/shared@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/shared/-/shared-2.1.0.tgz#0d7a666dd335396a59757f536ba9686c9b395bcc"
-  integrity sha512-ycCy1HCmIVtURVw/WCcWeYbwhPSLMUbfe5MIu5sM5S1ljJDhJsfOJcL0q//HdlQw77b6zKN/nC8Hj1DwzWTJmQ==
+"@storefront-ui/shared@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/shared/-/shared-2.2.0.tgz#85c0d98ca0d43bcc3a89665b4a2cb2c1663da21d"
+  integrity sha512-YR3Suzty8O+BtuJsG/gr28DE3kZ/aUQFheHXiMzt7BNe82ZRt2sUGF4no+ayR+2dpKPnnWarOljVCGZu2ayEzg==
 
-"@storefront-ui/tailwind-config@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/tailwind-config/-/tailwind-config-2.1.0.tgz#44186d0dd33f658d8b176d01d7577f80e844829b"
-  integrity sha512-6mQCYT68FBBsA50OyAxpSp7FqHcVwL/ZGHEbg2Q+wmcKjgf81GGO6hJPLGC2iUhDjQiAfm5FsaMxk1Anjkb6cA==
+"@storefront-ui/tailwind-config@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/tailwind-config/-/tailwind-config-2.2.0.tgz#ca4621ffdae8c18defc7c09c543373c3803204d7"
+  integrity sha512-dUd49kdQ7+F2dshxxSXJtRDAzTz6LXXsTQ5RookQpa+Zw2mlj0OL2M1L8gcg1WEapJQgNYTq2aDT8rXjFxpWrw==
   dependencies:
     "@mertasan/tailwindcss-variables" "^2.5.2"
-    "@storefront-ui/tw-plugin-peer-next" "2.1.0"
+    "@storefront-ui/tw-plugin-peer-next" "2.2.0"
 
-"@storefront-ui/tw-plugin-peer-next@2.1.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/tw-plugin-peer-next/-/tw-plugin-peer-next-2.1.0.tgz#751a18b0aad083bdc599bc006e70288f08c3d36c"
-  integrity sha512-cnAd9NEkiciNyY2SsD0EjfrF9JirQ9Da72n7Y89OU0mfsZY/NiaWbSQe+ApjRWk8FObOayM6M4X8TKso/uHUHQ==
+"@storefront-ui/tw-plugin-peer-next@2.2.0":
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/tw-plugin-peer-next/-/tw-plugin-peer-next-2.2.0.tgz#c23f8c0d96363df91ceb2a909a54b678635ebad1"
+  integrity sha512-eK7F5anH1kJepicnDNV2HembF8EFOk/y33M8O/gXrZCOPOu+joZCCoUKSKptLdSOSiG++r4UE8rHfRdAT+878Q==
 
 "@storefront-ui/vue@^2.0.0":
-  version "2.1.0"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/vue/-/vue-2.1.0.tgz#75ba9d6697a857f7e00d49f1a87c2f6ae909f196"
-  integrity sha512-OuAP67vMDQV5xLDPAHXhEbijripwrqrZqNj1BMMu+CsVokoA85JTB6abs9IOhwGZzaKaYb9qIH76wgPZ+s6giA==
+  version "2.2.0"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/vue/-/vue-2.2.0.tgz#a74bd8bbbd10b0e6006d8f8b40e34b315d7da592"
+  integrity sha512-ZpsPhJp6+lteNFlOgcpyXp2dKSGmgPVBMTGYKoS5QFuF/NEdqAl+AibcN8VDobxDs9g/W5L/xLHxXKM5GFmN6g==
   dependencies:
     "@floating-ui/vue" "^0.2.1"
-    "@storefront-ui/shared" "2.1.0"
-    "@storefront-ui/tailwind-config" "2.1.0"
+    "@storefront-ui/shared" "2.2.0"
+    "@storefront-ui/tailwind-config" "2.2.0"
     "@vueuse/core" "^9.12.0"
     jw-paginate "^1.0.4"
     tabbable "^6.1.1"
@@ -5617,9 +5617,9 @@ svgo@^3.0.2:
     picocolors "^1.0.0"
 
 tabbable@^6.1.1:
-  version "6.1.1"
-  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-6.1.1.tgz#40cfead5ed11be49043f04436ef924c8890186a0"
-  integrity sha512-4kl5w+nCB44EVRdO0g/UGoOp3vlwgycUVtkk/7DPyeLZUCuNFFKCFG6/t/DgHLrUPHjrZg6s5tNm+56Q2B0xyg==
+  version "6.1.2"
+  resolved "https://registry.yarnpkg.com/tabbable/-/tabbable-6.1.2.tgz#b0d3ca81d582d48a80f71b267d1434b1469a3703"
+  integrity sha512-qCN98uP7i9z0fIS4amQ5zbGBOq+OSigYeGvPy7NDk8Y9yncqDZ9pRPgfsc2PJIVM9RrJj7GIfuRgmjoUU9zTHQ==
 
 tailwind-config-viewer@^1.7.2:
   version "1.7.2"
@@ -6058,9 +6058,9 @@ vue-bundle-renderer@^1.0.3:
     ufo "^1.1.1"
 
 vue-demi@*:
-  version "0.14.0"
-  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.0.tgz#dcfd9a9cf9bb62ada1582ec9042372cf67ca6190"
-  integrity sha512-gt58r2ogsNQeVoQ3EhoUAvUsH9xviydl0dWJj7dabBC/2L4uBId7ujtCwDRD0JhkGsV1i0CtfLAeyYKBht9oWg==
+  version "0.14.1"
+  resolved "https://registry.yarnpkg.com/vue-demi/-/vue-demi-0.14.1.tgz#1ed9af03a27642762bfed83d8750805302d0398d"
+  integrity sha512-rt+yuCtXvscYot9SQQj3WKZJVSriPNqVkpVBNEHPzSgBv7QIYzsS410VqVgvx8f9AAPgjg+XPKvmV3vOqqkJQQ==
 
 vue-demi@^0.13.11, vue-demi@^0.13.5:
   version "0.13.11"
