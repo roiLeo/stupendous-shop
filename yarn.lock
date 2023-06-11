@@ -428,9 +428,9 @@
   integrity sha512-EvYTiXet5XqweYGClEmpu3BoxmsQ4hkj3QaYA6qEnigCWffTP3vNRwBReTdrwDwo7OoJ3wM8Uoe9Uk4n+d4hfg==
 
 "@floating-ui/dom@^1.2.1":
-  version "1.2.8"
-  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.2.8.tgz#aee0f6ccc0787ab8fe741487a6e5e95b7b125375"
-  integrity sha512-XLwhYV90MxiHDq6S0rzFZj00fnDM+A1R9jhSioZoMsa7G0Q0i+Q4x40ajR8FHSdYDE1bgjG45mIWe6jtv9UPmg==
+  version "1.2.9"
+  resolved "https://registry.yarnpkg.com/@floating-ui/dom/-/dom-1.2.9.tgz#b9ed1c15d30963419a6736f1b7feb350dd49c603"
+  integrity sha512-sosQxsqgxMNkV3C+3UqTS6LxP7isRLwX8WMepp843Rb3/b0Wz8+MdUkxJksByip3C2WwLugLHN1b4ibn//zKwQ==
   dependencies:
     "@floating-ui/core" "^1.2.6"
 
@@ -1472,32 +1472,32 @@
   resolved "https://registry.yarnpkg.com/@scure/base/-/base-1.1.1.tgz#ebb651ee52ff84f420097055f4bf46cfba403938"
   integrity sha512-ZxOhsSyxYwLJj3pLZCefNitxsj093tb2vq90mp2txoYeBqbcjDjqFhyM8eUjq/uFm6zJ+mUuqxlS2FkuSY1MTA==
 
-"@storefront-ui/shared@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/shared/-/shared-2.2.1.tgz#507f119ec032e60afd39f95dc063de728b84e7f6"
-  integrity sha512-cZVZKsuTpFPF6yOYVzuFm2Ft/AWMQ3PFWl3ixxmyyuLBi2b6HeoVGIF5LAlWKqjIdjwyjU0bEHQPcS05GMCafg==
+"@storefront-ui/shared@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/shared/-/shared-2.3.1.tgz#2112b0b56a5b3f4ebe4d0b0344efee009df42bbe"
+  integrity sha512-GAmDm1bR7+X9M2lnZEMXY7muiZAqhC1UaGoJgK0UTrxUwaOyIFxsJ78sg0QQ8sO79D3EABXgrusLhDmhJTgHIA==
 
-"@storefront-ui/tailwind-config@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/tailwind-config/-/tailwind-config-2.2.1.tgz#7702689bb575723fbe8c8ebd8cb1d1357b6906b4"
-  integrity sha512-6WdC5aasW7AIBTQEYPUyVBcQJuHDHQGsIuwwzIfG5OBC+y/eez3XuY9X8yQ4kKTj4OpOY1xyviiLlfGh+U1yqA==
+"@storefront-ui/tailwind-config@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/tailwind-config/-/tailwind-config-2.3.1.tgz#ddb6fa95687e71e25a86cec3d58fe8feb7ec31e9"
+  integrity sha512-WeoHZXeaxRiUnhB7/QLdGhDxFodgKGdRVyTSX0ebuGFaFdFQ0DylEPLLQtWLNsoRgIdXyheBfWIYzznj0HRkiQ==
   dependencies:
     "@mertasan/tailwindcss-variables" "^2.5.2"
-    "@storefront-ui/tw-plugin-peer-next" "2.2.1"
+    "@storefront-ui/tw-plugin-peer-next" "2.3.1"
 
-"@storefront-ui/tw-plugin-peer-next@2.2.1":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/tw-plugin-peer-next/-/tw-plugin-peer-next-2.2.1.tgz#88ef62411f4c3bd82a5132b49fbe834e4bfde25c"
-  integrity sha512-BfI18pk0gX3A/Z4I1+hixwwyJHK5JOjuwU6HataUVjysqp4KuYdpK0hky31hUaehkUdfvAScY4+VTmt8ub5CTA==
+"@storefront-ui/tw-plugin-peer-next@2.3.1":
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/tw-plugin-peer-next/-/tw-plugin-peer-next-2.3.1.tgz#0b4fe9040bd76a91061d71d339b63d2821845a78"
+  integrity sha512-u7vZogjljmpMR/CoInQhNIOd9Cat8emj85GxEUjPbdYU+vSTWFtVBPJFrPm9+G7Ackl4iV1BS7epx+QqdrU67A==
 
 "@storefront-ui/vue@^2.0.0":
-  version "2.2.1"
-  resolved "https://registry.yarnpkg.com/@storefront-ui/vue/-/vue-2.2.1.tgz#cf9e12356c13421d40b88cc3819207bfa23f9a8b"
-  integrity sha512-7ov9yuxv688vRN6HQZohhEWwViTSYWnZGM+cmyVJZoayoTtKWwDvWcVVR3gMMVqn46DixDzn6QG7v4pkD5qx5w==
+  version "2.3.1"
+  resolved "https://registry.yarnpkg.com/@storefront-ui/vue/-/vue-2.3.1.tgz#21e59624899d76403bd5dcc4b2a0753c2ff2bc11"
+  integrity sha512-KYMm4AxfDMCEJcSw0JbtppT7Q/uljuSFPqm/T+Dv3TI+JQZv+wk7hTiOwgYW1QYgPz7Lx2IAIH5oa0YliBDglQ==
   dependencies:
     "@floating-ui/vue" "^0.2.1"
-    "@storefront-ui/shared" "2.2.1"
-    "@storefront-ui/tailwind-config" "2.2.1"
+    "@storefront-ui/shared" "2.3.1"
+    "@storefront-ui/tailwind-config" "2.3.1"
     "@vueuse/core" "^9.12.0"
     jw-paginate "^1.0.4"
     tabbable "^6.1.1"
