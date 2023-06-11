@@ -1206,7 +1206,7 @@
     "@scure/base" "1.1.1"
     tslib "^2.5.3"
 
-"@polkadot/util@12.2.2", "@polkadot/util@^12.0.0", "@polkadot/util@^12.2.2":
+"@polkadot/util@12.2.2", "@polkadot/util@^12.2.2":
   version "12.2.2"
   resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-12.2.2.tgz#f586fd62c330a09bb026b1584be1bb07c8b27b6b"
   integrity sha512-u/v5Z2+iUwX/CXEMVZgJmwqqx1kT5Zfxsio3vpuYaPCg49xhTKqAcrakgB+1BUHhhyF3Zkb9uG73JWFR0Lkk9w==
@@ -1219,7 +1219,7 @@
     bn.js "^5.2.1"
     tslib "^2.5.3"
 
-"@polkadot/util@12.3.1":
+"@polkadot/util@12.3.1", "@polkadot/util@^12.0.0":
   version "12.3.1"
   resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-12.3.1.tgz#0259e505b73712e1b6a606f4f7cb5140e1b8aa57"
   integrity sha512-DKA+yYSO0o45zfUvP7E1VMY8HMtVr99R0cdCm808yl7YpQrM+Oe14cf6Igxs36tdYKY9rlMMbSB/gtQOAUoNTA==
