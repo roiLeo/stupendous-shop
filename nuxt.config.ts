@@ -5,13 +5,21 @@ export default defineNuxtConfig({
       charset: 'utf-8',
       viewport: 'width=device-width, initial-scale=1',
     },
-    pageTransition: { name: 'page', mode: 'out-in' }
+    pageTransition: { name: 'page', mode: 'out-in' },
   },
-	modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/i18n',
-    '@pinia/nuxt'
+  css: [
+    '@/assets/styles/main.css'
   ],
+  modules: [
+    '@nuxtjs/tailwindcss',
+    '@nuxtjs/color-mode',
+    '@nuxtjs/i18n',
+    '@pinia/nuxt',
+  ],
+  colorMode: {
+    preference: 'dark',
+    classSuffix: '',
+  },
   i18n: {
     locales: [
       { code: 'en', file: 'en.json', name: '🇬🇧' },
@@ -23,9 +31,6 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
   },
   pinia: {
-    autoImports: [
-      'defineStore',
-      ['defineStore', 'definePiniaStore'],
-    ],
+    autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
   },
-})
+});

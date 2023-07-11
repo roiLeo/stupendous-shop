@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col justify-center mx-auto h-full max-w-[1536px] w-full p-4 md:px-10">
+	<div class="flex flex-col justify-center mx-auto h-full max-w-[1536px] w-full p-4 md:px-10 bg-neutral-50">
 		<form class="py-5" @submit.prevent="submitInput">
 			<SfInput size="lg" aria-label="Label size lg" placeholder="Type your Collection Id" v-model="inputCollectionId">
 				<template #suffix><SfIconSearch /></template>

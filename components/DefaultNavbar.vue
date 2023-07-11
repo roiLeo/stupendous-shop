@@ -1,6 +1,6 @@
 <template>
   <div class="w-full h-full bg-neutral-50">
-    <header class="flex justify-center w-full bg-white border-b h-14 md:h-20 border-neutral-200">
+    <header class="flex justify-center w-full bg-neutral-50 border-b h-14 md:h-20 border-neutral-200">
       <div class="flex items-center flex-row flex-nowrap justify-start h-full max-w-[1536px] w-full px-4 md:px-10">
         <SfButton class="block !px-2 mr-auto" type="button" variant="tertiary" :tag="NuxtLink" to="/">
           <template #prefix>
@@ -11,6 +11,7 @@
         <nav>
           <div class="flex flex-row flex-nowrap">
             <LocaleSwitcher class="mr-5" />
+            <ThemeButton class="mr-2" />
             <ShoppingCart />
             <NuxtLink to="/wishlist">
               <SfButton

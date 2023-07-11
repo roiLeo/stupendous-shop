@@ -9,7 +9,7 @@
 		<div class="relative px-4 w-full max-w-md h-full md:h-auto m-auto">
 			<!-- Modal content -->
 			<div
-				class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-white rounded-lg shadow w-full max-w-md"
+				class="fixed top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-neutral-50 rounded-lg shadow w-full max-w-md"
 			>
 				<!-- Modal header -->
 				<div
