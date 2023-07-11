@@ -13,11 +13,11 @@
 
       <WishlistButton
         :product="item"
-        class="absolute bottom-0 right-0 mr-2 mb-2 bg-white border border-neutral-200 !rounded-full"
+        class="absolute bottom-0 right-0 mr-2 mb-2 bg-neutral-50 border border-neutral-200 !rounded-full"
       />
 		</div>
 		<div class="p-4 border-t border-neutral-200">
-			<SfLink :tag="NuxtLink" :to="`/products/${item.id}`" variant="secondary" class="no-underline">
+			<SfLink :tag="NuxtLink" :to="`/products/${item.id}`" class="no-underline">
         {{ item.name }}
       </SfLink>
 

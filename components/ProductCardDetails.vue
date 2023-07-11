@@ -1,6 +1,6 @@
 <template>
 	<div class="my-4 lg:grid lg:grid-cols-2 lg:gap-x-16">
-		<div class="w-full bg-white rounded-xl border-2 border-gray-200 lg:mt-0 lg:col-start-1 lg:row-span-2 lg:self-start">
+		<div class="w-full bg-neutral-50 rounded-xl border-2 border-gray-200 lg:mt-0 lg:col-start-1 lg:row-span-2 lg:self-start">
 			<div class="rounded-lg overflow-hidden">
 				<img class="w-full h-full object-center object-contain"
           :src="image"

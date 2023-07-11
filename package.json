@@ -10,14 +10,15 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
+    "@nuxtjs/color-mode": "^3.3.0",
     "@nuxtjs/i18n": "^8.0.0-beta.10",
     "@nuxtjs/tailwindcss": "^6.6.5",
     "@storefront-ui/vue": "^2.0.0",
     "nuxt": "^3.3.2"
   },
   "dependencies": {
-    "@kodadot1/minipfs": "^0.2.1-rc.0",
-    "@kodadot1/uniquery": "^0.2.2-rc.0",
+    "@kodadot1/minipfs": "^0.3.1-rc.0",
+    "@kodadot1/uniquery": "^0.3.1-rc.0",
     "@pinia/nuxt": "^0.4.7",
     "@polkadot/api": "^10.2.2",
     "@polkadot/extension-dapp": "^0.46.0",
