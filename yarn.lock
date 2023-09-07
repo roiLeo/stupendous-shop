@@ -770,6 +770,20 @@
   resolved "https://registry.yarnpkg.com/@kodadot1/static/-/static-0.0.3-rc.4.tgz#705788914598df8a8d20d99b23800a504c8a4c98"
   integrity sha512-2p0BAx2ABIGq3uVCBIeSRfLuhuEHL1b2583tzv40q1NPfYwvtZmQMvrzRDtTnz6Bh3qegBam46oaadj53/78bQ==
 
+"@kodadot1/static@^0.0.2":
+  version "0.0.2"
+  resolved "https://registry.yarnpkg.com/@kodadot1/static/-/static-0.0.2.tgz#a60e04610489c5fd29f5b112348b8562ec8c7a0a"
+  integrity sha512-SS+g9xVCQ6GmdjHoQvn3aplhbLJMyOGBOyOycydFmS33JHoabSEH/KZvBAmsVQUGP7slKHqJ0ZRu3HS9pi0imQ==
+
+"@kodadot1/sub-api@^0.2.0-rc.0":
+  version "0.2.0-rc.0"
+  resolved "https://registry.yarnpkg.com/@kodadot1/sub-api/-/sub-api-0.2.0-rc.0.tgz#d77519a3a7d91ef4079bd6828989cfee2ef4359f"
+  integrity sha512-noEwHKBLzJAj/6pZqjqX44d7j/K8sF30uKAzfmbH8vdVdAkvNIQe4XqcxqwgYGirUyT0nD5dNhDaJ/gF1EZYvQ==
+  dependencies:
+    "@kodadot1/static" "^0.0.2"
+    "@polkadot/api" "^10.6.1"
+    "@polkadot/types-codec" "^10.6.1"
+
 "@kodadot1/uniquery@^0.3.1-rc.0":
   version "0.3.1-rc.0"
   resolved "https://registry.yarnpkg.com/@kodadot1/uniquery/-/uniquery-0.3.1-rc.0.tgz#3d4e1b503948bc5ed057b980b0304d346cca0b0e"
@@ -1246,7 +1260,7 @@
     rxjs "^7.8.1"
     tslib "^2.5.3"
 
-"@polkadot/api@10.9.1", "@polkadot/api@^10.2.2", "@polkadot/api@^10.9.1":
+"@polkadot/api@10.9.1", "@polkadot/api@^10.2.2", "@polkadot/api@^10.6.1", "@polkadot/api@^10.9.1":
   version "10.9.1"
   resolved "https://registry.yarnpkg.com/@polkadot/api/-/api-10.9.1.tgz#156b3436f45ef18218960804988c1f552d2c4e46"
   integrity sha512-ND/2UqZBWvtt4PfV03OStTKg0mxmPk4UpMAgJKutdgsz/wP9CYJ1KbjwFgPNekL9JnzbKQsWyQNPVrcw7kQk8A==
@@ -1372,7 +1386,7 @@
     "@polkadot/util" "^12.3.1"
     tslib "^2.5.3"
 
-"@polkadot/types-codec@10.9.1":
+"@polkadot/types-codec@10.9.1", "@polkadot/types-codec@^10.6.1":
   version "10.9.1"
   resolved "https://registry.yarnpkg.com/@polkadot/types-codec/-/types-codec-10.9.1.tgz#f30026d3dfeaa69c07c45fa66d1c39318fd232cc"
   integrity sha512-mJ5OegKGraY1FLvEa8FopRCr3pQrhDkcn5RNOjmgJQozENVeRaxhk0NwxYz7IojFvSDnKnc6lNQfKaaSe5pLHg==

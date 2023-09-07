@@ -18,6 +18,7 @@
   },
   "dependencies": {
     "@kodadot1/minipfs": "^0.3.1-rc.0",
+    "@kodadot1/sub-api": "^0.2.0-rc.0",
     "@kodadot1/uniquery": "^0.3.1-rc.0",
     "@pinia/nuxt": "^0.4.7",
     "@polkadot/api": "^10.2.2",
