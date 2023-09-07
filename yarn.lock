@@ -845,21 +845,21 @@
   dependencies:
     ofetch "^1.0.1"
 
-"@kodadot1/static@0.0.3-rc.4":
-  version "0.0.3-rc.4"
-  resolved "https://registry.yarnpkg.com/@kodadot1/static/-/static-0.0.3-rc.4.tgz#705788914598df8a8d20d99b23800a504c8a4c98"
-  integrity sha512-2p0BAx2ABIGq3uVCBIeSRfLuhuEHL1b2583tzv40q1NPfYwvtZmQMvrzRDtTnz6Bh3qegBam46oaadj53/78bQ==
+"@kodadot1/static@0.0.3":
+  version "0.0.3"
+  resolved "https://registry.yarnpkg.com/@kodadot1/static/-/static-0.0.3.tgz#1c41d27b13495bc345cbd93bfb7b17d43455b81a"
+  integrity sha512-V9WIHN8LZMeKHRyJ86TnAya2y6Mi9bRBYXS0hX9NVfPzrmnlzSPkx/cXyDiqewduAT+OrjfscQaiFvN2iEJymw==
 
-"@kodadot1/uniquery@^0.3.1-rc.0":
-  version "0.3.1-rc.0"
-  resolved "https://registry.yarnpkg.com/@kodadot1/uniquery/-/uniquery-0.3.1-rc.0.tgz#3d4e1b503948bc5ed057b980b0304d346cca0b0e"
-  integrity sha512-Y2QR0vSEmAzcZx1+9lNUK2S5btXGQo7uQBjiElqmM3UGKukVNeCMQTwdJ5uuBujsu9BSLRiCyqEwP6gyrXf5aA==
+"@kodadot1/uniquery@^0.4.0":
+  version "0.4.0"
+  resolved "https://registry.yarnpkg.com/@kodadot1/uniquery/-/uniquery-0.4.0.tgz#552dd0269fa6a397f3804264e4f46d351872c056"
+  integrity sha512-3yf3xOo2xxTQPSps99pR7jw+wLmZQAU9DJp51+sEhaKGMpL3l+Qm5cFqOW+1jKhGA6fjzUfxmvM9qIwrtLeyNg==
   dependencies:
-    "@kodadot1/static" "0.0.3-rc.4"
+    "@kodadot1/static" "0.0.3"
     gql-query-builder "^3.8.0"
-    ofetch "^1.0.1"
+    ofetch "^1.1.1"
     scule "^1.0.0"
-    ufo "^1.1.2"
+    ufo "^1.2.0"
 
 "@mapbox/node-pre-gyp@^1.0.5":
   version "1.0.11"
