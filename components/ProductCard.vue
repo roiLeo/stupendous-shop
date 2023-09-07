@@ -1,7 +1,7 @@
 <template>
-	<div class="border border-neutral-200 rounded-md hover:shadow-lg max-w-[300px]">
+	<div class="border border-gray-200 dark:border-gray-700 rounded-md hover:shadow-lg max-w-[300px]">
 		<div class="relative">
-			<SfLink :tag="NuxtLink" :to="`/products/${item.id}`">
+      <nuxt-link :to="`/products/${item.id}`">
 				<img class="block object-cover h-auto rounded-md aspect-square"
           :src="image"
           :alt="item.name"
@@ -9,17 +9,17 @@
           :height="300"
           loading="lazy"
         />
-			</SfLink>
+      </nuxt-link>
 
       <WishlistButton
         :product="item"
-        class="absolute bottom-0 right-0 mr-2 mb-2 bg-neutral-50 border border-neutral-200 !rounded-full"
+        class="absolute bottom-0 right-0 mr-2 mb-2 border border-gray-200 dark:border-gray-700 !rounded-full"
       />
 		</div>
-		<div class="p-4 border-t border-neutral-200">
-			<SfLink :tag="NuxtLink" :to="`/products/${item.id}`" class="no-underline">
+		<div class="p-4 border-t border-gray-200 dark:border-gray-700">
+      <nuxt-link :to="`/products/${item.id}`">
         {{ item.name }}
-      </SfLink>
+      </nuxt-link>
 
 			<!-- <div class="flex items-center pt-1">
 				<SfRating size="xs" :value="5" :max="5" />
@@ -44,10 +44,8 @@
 </template>
 
 <script lang="ts" setup>
-import { SfRating, SfCounter, SfLink, SfButton, SfIconShoppingCart, SfIconFavorite } from '@storefront-ui/vue'
-import { resolveComponent } from 'vue'
+import { SfButton, SfIconShoppingCart } from '@storefront-ui/vue'
 
-const NuxtLink = resolveComponent('NuxtLink')
 const props = defineProps(['item'])
 const image = useSanitizeUri(props.item.meta?.image)
 const price = ref(props.item.price)

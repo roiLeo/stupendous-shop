@@ -1,12 +1,10 @@
 <template>
-  <SfButton type="button" @click="open = true"
-    class="mr-2 -ml-0.5 rounded-md text-primary-700 hover:bg-primary-100 active:bg-primary-200 hover:text-primary-600 active:text-primary-700"
-    variant="tertiary"
-    square>
-    <template #prefix>
-      <SfIconShoppingCart />
-    </template>
-  </SfButton>
+  <UButton
+    icon="i-heroicons-shopping-cart"
+    variant="ghost"
+    aria-label="Cart"
+    @click="open = true"
+  />
 
   <transition
     enter-active-class="transition duration-500 ease-in-out"

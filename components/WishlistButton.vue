@@ -1,18 +1,14 @@
 <template>
-  <SfButton
-    type="button"
-    variant="tertiary"
-    size="sm"
-    square
+  <UButton
+    variant="ghost"
+    :ui="{ rounded: 'rounded-full bg-white' }"
+    :icon="isInList ? 'i-heroicons-heart-20-solid' : 'i-heroicons-heart'"
     aria-label="Add to wishlist"
-    @click="toggleWishlist">
-      <SfIconFavoriteFilled v-if="isInList" size="sm" class="text-pink-400"/>
-      <SfIconFavorite v-else size="sm" class="text-pink-200" />
-  </SfButton>
+    @click="toggleWishlist"
+  />
 </template>
 
 <script setup lang="ts">
-import { SfButton, SfIconFavorite, SfIconFavoriteFilled } from '@storefront-ui/vue'
 import { useWishlistStore } from '@/stores/wishlist'
 
 const wishlistStore = useWishlistStore()
