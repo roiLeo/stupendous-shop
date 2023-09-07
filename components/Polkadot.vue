@@ -10,28 +10,19 @@
   </svg>
 </template>
 
-<script lang="ts">
+<script lang="ts" setup>
 /**
  * @name Polkadot
  * @description The Polkadot default identicon
- */
-
-import { defineComponent, ref, watch } from 'vue'
+*/
 import { polkadotIcon } from '@polkadot/ui-shared'
 
-export default defineComponent({
-  props: ['address', 'isAlternative', 'size'],
-  setup (props) {
-    const { address, size, isAlternative } = props
-    const circles = ref()
-    circles.value = polkadotIcon(address, { isAlternative }).map(({ cx, cy, fill, r }) => {
-      return {
-        cx, cy, fill, r,
-        width: size,
-        height: size
-      }
-    })
-    return { circles }
+const { address, size, isAlternative } = defineProps(['address', 'isAlternative', 'size'])
+const circles = ref(polkadotIcon(address, { isAlternative }).map(({ cx, cy, fill, r }) => {
+  return {
+    cx, cy, fill, r,
+    width: size,
+    height: size
   }
-})
+}))
 </script>

@@ -2,7 +2,7 @@ import type { Config } from 'tailwindcss'
 import { tailwindConfig } from '@storefront-ui/vue/tailwind-config'
 
 export default <Config>{
-  darkMode: 'class',
+  // darkMode: 'class',
   presets: [tailwindConfig],
   content: ['./**/*.vue', './node_modules/@storefront-ui/vue/**/*.{js,mjs}'],
 }

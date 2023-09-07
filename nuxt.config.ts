@@ -7,15 +7,11 @@ export default defineNuxtConfig({
     },
     pageTransition: { name: 'page', mode: 'out-in' },
   },
-  css: [
-    '@/assets/styles/main.css'
-  ],
-  modules: [
-    '@nuxtjs/tailwindcss',
-    '@nuxtjs/color-mode',
-    '@nuxtjs/i18n',
-    '@pinia/nuxt',
-  ],
+  css: ['@/assets/styles/main.css'],
+  modules: ['@nuxthq/ui', '@nuxtjs/i18n', '@pinia/nuxt'],
+  ui: {
+    global: true,
+  },
   colorMode: {
     preference: 'dark',
     classSuffix: '',

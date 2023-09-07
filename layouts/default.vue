@@ -1,7 +1,9 @@
 <template>
-	<div>
-		<DefaultNavbar />
-		<NuxtPage />
-		<DefaultFooter />
-	</div>
+  <UMain>
+    <UContainer>
+      <DefaultNavbar />
+      <NuxtPage />
+      <DefaultFooter />
+    </UContainer>
+  </UMain>
 </template>
