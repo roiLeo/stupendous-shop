@@ -1491,7 +1491,7 @@
     "@scure/base" "1.1.1"
     tslib "^2.6.2"
 
-"@polkadot/util@12.4.2", "@polkadot/util@^12.0.0", "@polkadot/util@^12.3.1", "@polkadot/util@^12.3.2":
+"@polkadot/util@12.4.2", "@polkadot/util@^12.3.1", "@polkadot/util@^12.3.2":
   version "12.4.2"
   resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-12.4.2.tgz#65759f4b366c2a787fd21abacab8cf8ab1aebbf9"
   integrity sha512-NcTCbnIzMb/3TvJNEbaiu/9EvYIBuzDwZfqQ4hzL0GAptkF8aDkKMDCfQ/j3FI38rR+VTPQHNky9fvWglGKGRw==
@@ -1504,7 +1504,7 @@
     bn.js "^5.2.1"
     tslib "^2.6.2"
 
-"@polkadot/util@12.5.1":
+"@polkadot/util@12.5.1", "@polkadot/util@^12.0.0":
   version "12.5.1"
   resolved "https://registry.yarnpkg.com/@polkadot/util/-/util-12.5.1.tgz#f4e7415600b013d3b69527aa88904acf085be3f5"
   integrity sha512-fDBZL7D4/baMG09Qowseo884m3QBzErGkRWNBId1UjWR99kyex+cIY9fOSzmuQxo6nLdJlLHw1Nz2caN3+Bq0A==
@@ -1873,9 +1873,9 @@
   integrity sha512-Hr5Jfhc9eYOQNPYO5WLDq/n4jqijdHNlDXjuAQkkt+mWdQR+XJToOHrsD4cPaMXpn6KO7y2+wM8AZEs8VpBLVA==
 
 "@types/node@*":
-  version "20.6.0"
-  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.6.0.tgz#9d7daa855d33d4efec8aea88cd66db1c2f0ebe16"
-  integrity sha512-najjVq5KN2vsH2U/xyh2opaSEz6cZMR2SetLIlxlj08nOcmPOemJmUK2o4kUzfLqfrWE0PIrNeE16XhYDd3nqg==
+  version "20.6.1"
+  resolved "https://registry.yarnpkg.com/@types/node/-/node-20.6.1.tgz#8b589bba9b2af0128796461a0979764562687e6f"
+  integrity sha512-4LcJvuXQlv4lTHnxwyHQZ3uR9Zw2j7m1C9DfuwoTFQQP4Pmu04O6IfLYgMmHoOCt0nosItLLZAH+sOrRE0Bo8g==
 
 "@types/parse-json@^4.0.0":
   version "4.0.0"
