@@ -4,7 +4,7 @@
     :ui="{ item: { disabled: 'cursor-text select-text' } }"
     :popper="{ placement: 'bottom-start' }"
   >
-    <UButton aria-label="your Wallet" variant="ghost">
+    <UButton aria-label="your Wallet" color="gray" variant="ghost" square size="lg">
       <Polkadot size="24" theme="polkadot" :address="account" class="avatar" />
     </UButton>
     <template #account="{ item }">

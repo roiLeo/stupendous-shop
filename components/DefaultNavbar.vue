@@ -13,12 +13,13 @@
       <nav>
         <div class="flex flex-row flex-nowrap">
           <LocaleSwitcher class="mx-2" />
-          <ThemeButton class="mx-2" />
-          <ShoppingCart class="mx-2" />
+          <ThemeButton />
+          <ShoppingCart />
 
           <UButton
-            class="mx-2"
+            size="lg"
             icon="i-heroicons-heart"
+            color="gray"
             variant="ghost"
             aria-label="Heart"
             to="/wishlist"

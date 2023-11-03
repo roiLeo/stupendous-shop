@@ -1,9 +1,12 @@
 <template>
   <UButton
     icon="i-heroicons-shopping-cart"
+    size="lg"
+    color="gray"
     variant="ghost"
     aria-label="Cart"
     @click="open = true"
+    square
   />
 
   <transition
