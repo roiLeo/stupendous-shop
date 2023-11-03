@@ -15,25 +15,18 @@
 			<div class="flex flex-col gap-4 py-4 lg:pt-0">
 				<div class="w-full flex items-center justify-between gap-4">
 					<hgroup>
-						<h1 class="text-2xl font-bold tracking-tight text-gray-900 sm:text-3xl">
+						<h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
 							{{ item.name }}
 						</h1>
             <div class="mt-2 text-gray-400">
-              <SfTooltip :label="new Date(item.createdAt).toLocaleDateString()">
-                <time><SfIconCalendarToday size="sm" /> Minted {{ timeAgo(item.createdAt) }} ago</time>
-              </SfTooltip>
+              <UTooltip :text="new Date(item.createdAt).toLocaleDateString()">
+                <time>Minted {{ timeAgo(item.createdAt) }} ago</time>
+              </UTooltip>
             </div>
 					</hgroup>
-
-					<SfChip class="text-gray-600" v-if="isAvailable">
+          <UBadge color="gray" size="lg" variant="solid" v-if="isAvailable">
             {{ formatPrice(item.price) }}
-						<template #suffix>
-							<!-- bg-gradient-to-tr from-[#4ADE80] to-[#A78BFA] -->
-							<SfThumbnail class="bg-gray-600 text-sm text-white leading-5 text-center">
-								°
-							</SfThumbnail>
-						</template>
-					</SfChip>
+          </UBadge>
 				</div>
 			</div>
 
@@ -59,18 +52,22 @@
         </div>
       </div>
 
-      <div class="mt-4 mb-8 space-y-6 font-light prose">
+      <div class="mt-4 text-lg text-gray-500 dark:text-gray-400 mb-8 space-y-6 font-light prose">
         {{ description }}
       </div>
 
       <hr class="border-1 border-gray-200 dark:border-gray-700">
 
-      <SfButton type="button" size="lg" class="w-full my-12" :disabled="!isAvailable" @click="addToCart()">
-        <template #prefix>
-          <SfIconShoppingCart size="sm" />
-        </template>
-  				{{ $t('action.add_to_cart') }}
-      </SfButton>
+      <UButton
+        block
+        class="my-12"
+        size="lg"
+        icon="i-heroicons-shopping-cart"
+        :disabled="!isAvailable"
+        @click="addToCart()"
+      >
+        {{ $t('action.add_to_cart') }}
+      </UButton>
 
       <hr class="border-1 border-gray-200 dark:border-gray-700">
 
@@ -82,7 +79,6 @@
 </template>
 
 <script lang="ts" setup>
-import { SfChip, SfIconShoppingCart, SfButton, SfThumbnail, SfTooltip, SfIconCalendarToday } from '@storefront-ui/vue'
 import { useCartStore } from '@/stores/cart'
 
 const props = defineProps(['item'])
