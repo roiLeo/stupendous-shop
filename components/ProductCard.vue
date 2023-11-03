@@ -21,31 +21,24 @@
         {{ item.name }}
       </nuxt-link>
 
-			<!-- <div class="flex items-center pt-1">
-				<SfRating size="xs" :value="5" :max="5" />
-
-				<SfLink :tag="NuxtLink" :to="`/products/${item.id}`" variant="secondary" class="pl-1 no-underline">
-					<SfCounter size="xs">123</SfCounter>
-				</SfLink>
-			</div> -->
-
 			<p class="block py-2 font-normal leading-5 typography-text-sm text-neutral-700">
 				{{ description }}
 			</p>
 			<span class="block pb-2 font-bold typography-text-lg" v-if="price > 0">{{ formatPrice(price) }}</span>
-			<SfButton type="button" size="sm" v-if="!hasOwner">
-				<template #prefix>
-					<SfIconShoppingCart size="sm" />
-				</template>
-				{{ $t('action.add_to_cart') }}
-			</SfButton>
+      <UButton
+        block
+        class="my-12"
+        size="sm"
+        icon="i-heroicons-shopping-cart"
+        v-if="!hasOwner"
+      >
+        {{ $t('action.add_to_cart') }}
+      </UButton>
 		</div>
 	</div>
 </template>
 
 <script lang="ts" setup>
-import { SfButton, SfIconShoppingCart } from '@storefront-ui/vue'
-
 const props = defineProps(['item'])
 const image = useSanitizeUri(props.item.meta?.image)
 const price = ref(props.item.price)

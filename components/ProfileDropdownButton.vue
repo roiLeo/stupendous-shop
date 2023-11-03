@@ -1,27 +1,64 @@
 <template>
-  <SfDropdown v-model="isOpen" :placement="SfPopoverPlacement['bottom-start']">
-    <template #trigger>
-      <SfButton
-        class="mr-2 -ml-0.5 rounded-md text-primary-700 hover:bg-primary-100 active:bg-primary-200 hover:text-primary-600 active:text-primary-700"
-        variant="tertiary"
-        square
-        @click="toggle()"
-      >
-        <template #prefix>
-          <Polkadot size="24" theme="polkadot" :address="account" class="avatar" />
-        </template>
-        {{ shortAddress(account) }}
-      </SfButton>
+  <UDropdown
+    :items="items"
+    :ui="{ item: { disabled: 'cursor-text select-text' } }"
+    :popper="{ placement: 'bottom-start' }"
+  >
+    <UButton aria-label="your Wallet" variant="ghost">
+      <Polkadot size="24" theme="polkadot" :address="account" class="avatar" />
+    </UButton>
+    <template #account="{ item }">
+      <div class="text-left truncate">
+        <p>Signed in as</p>
+        <p class="truncate font-medium text-gray-900 dark:text-white">
+          {{ item.label }}
+        </p>
+      </div>
     </template>
-    <ul class="p-2 rounded bg-neutral-100">
-      <li><SfButton type="button" variant="tertiary" @click="resetAccount()"> Log out </SfButton></li>
-      <li><SfButton type="button" variant="tertiary"> Settings </SfButton></li>
-    </ul>
-  </SfDropdown>
+
+    <template #item="{ item }">
+      <span class="truncate">{{ item.label }}</span>
+
+      <UIcon
+        :name="item.icon"
+        class="flex-shrink-0 h-4 w-4 text-gray-400 dark:text-gray-500 ms-auto"
+      />
+    </template>
+  </UDropdown>
 </template>
 
 <script lang="ts" setup>
-import { SfButton, SfDropdown, useDisclosure, SfPopoverPlacement } from '@storefront-ui/vue'
-const { isOpen, toggle } = useDisclosure()
 const { account, resetAccount } = useConnectWallet()
+const items = [
+  [
+    {
+      label: account.value,
+      slot: 'account',
+      disabled: true,
+    },
+  ],
+  [
+    {
+      label: 'Settings',
+      icon: 'i-heroicons-cog-8-tooth',
+    },
+  ],
+  [
+    {
+      label: 'Documentation',
+      icon: 'i-heroicons-book-open',
+    },
+    {
+      label: 'Status',
+      icon: 'i-heroicons-signal',
+    },
+  ],
+  [
+    {
+      label: 'Sign out',
+      icon: 'i-heroicons-arrow-left-on-rectangle',
+      click: () => resetAccount()
+    },
+  ],
+]
 </script>
