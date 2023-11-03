@@ -4,6 +4,8 @@
       <UButton
         class="block !px-2 mr-auto"
         icon="i-heroicons-home"
+        size="lg"
+        color="gray"
         variant="ghost"
         aria-label="Heart"
         to="/"
