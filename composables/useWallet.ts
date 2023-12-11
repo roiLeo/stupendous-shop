@@ -1,4 +1,4 @@
-import { SupportedWallets, Wallet, WalletAccount } from '@/utils/wallets'
+import { SupportedWallets, type Wallet, type WalletAccount } from '@/utils/wallets'
 import { useAccountStore } from '@/stores/account'
 
 export const useConnectWallet = () => {

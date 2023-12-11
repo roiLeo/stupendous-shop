@@ -2,6 +2,6 @@
   <UContainer>
     <DefaultNavbar />
     <NuxtPage />
-    <DefaultFooter />
   </UContainer>
+  <DefaultFooter />
 </template>
