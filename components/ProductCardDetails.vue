@@ -36,7 +36,7 @@
           <span>
             <a class="text-blue-500 hover:underline"
                 target="_blank"
-                :href="`https://beta.kodadot.xyz/bsx/u/${item.currentOwner}`">
+                :href="`https://beta.kodadot.xyz/ahk/u/${item.currentOwner}`">
               {{ shortAddress(item.currentOwner) }}
             </a>
           </span>

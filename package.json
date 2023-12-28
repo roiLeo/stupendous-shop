@@ -1,6 +1,6 @@
 {
-  "name": "bsx-shop",
-  "description": "Custom Basilisk marketplace",
+  "name": "stupendous-shop",
+  "description": "Custom NFT marketplace",
   "private": true,
   "scripts": {
     "build": "nuxt build",
@@ -10,9 +10,9 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^8.0.0-beta.10",
+    "@nuxtjs/i18n": "^8.0.0",
     "@storefront-ui/vue": "^2.0.0",
-    "nuxt": "^3.3.2"
+    "nuxt": "^3.8"
   },
   "dependencies": {
     "@kodadot1/minipfs": "^0.4.2-rc.0",

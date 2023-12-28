@@ -4,23 +4,23 @@ root = true
 [*]
 charset = utf-8
 end_of_line = lf
+indent_size = 2
+indent_style = space
 insert_final_newline = true
 trim_trailing_whitespace = true
 
+# Indentation override for all MD
+[*.md]
+trim_trailing_whitespace = false
+
 # Indentation override for all JS
-[**.js]
-indent_style = space
-indent_size = 2
+[*.js]
 quote_type = single
 
 # Indentation override for all VUE
-[**.vue]
-indent_style = space
-indent_size = 2
+[*.vue]
 quote_type = single
 
 # Indentation override for all TS
-[**.ts]
-indent_style = space
-indent_size = 2
+[*.ts]
 quote_type = single

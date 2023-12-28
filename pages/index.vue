@@ -1,8 +1,12 @@
 <template>
 	<div>
-		<form class="py-5" @submit.prevent="submitInput">
+
+    <CollectionHeader />
+
+    <!-- TODO: search & filters  -->
+		<!-- <form class="py-5" @submit.prevent="submitInput">
       <SearchInput v-model="inputCollectionId" />
-		</form>
+		</form> -->
 
 		<!-- {{ items }} -->
 		<div class="grid lg:grid-cols-6 md:grid-cols-4 xs:grid-cols-2 gap-4 py-4">

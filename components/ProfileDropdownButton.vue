@@ -45,8 +45,9 @@ const items = [
   ],
   [
     {
-      label: 'Documentation',
+      label: 'Code',
       icon: 'i-heroicons-book-open',
+      to: 'https://github.com/roiLeo/stupendous-shop'
     },
     {
       label: 'Status',

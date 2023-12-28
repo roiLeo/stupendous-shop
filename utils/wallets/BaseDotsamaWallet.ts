@@ -1,6 +1,6 @@
-import { SubscriptionFn, Wallet } from '@/utils/wallets'
+import type { SubscriptionFn, Wallet } from '@/utils/wallets'
 import type { Signer as InjectedSigner } from '@polkadot/api/types'
-import {
+import type {
 	InjectedAccount,
 	InjectedExtension,
 	InjectedMetadata,
@@ -9,7 +9,9 @@ import {
 } from '@polkadot/extension-inject/types'
 import { formatAddress } from '@/composables/utils'
 
-const DAPP_NAME = 'BSX-Shop'
+const DAPP_NAME = 'STUPENDOUS-Shop';
+const AHK_PREFIX = 2
+const AHP_PREFIX = 0
 const BSX_PREFIX = 10041
 
 export class BaseDotsamaWallet implements Wallet {
@@ -132,7 +134,7 @@ export class BaseDotsamaWallet implements Wallet {
 		const accounts = await this._extension.accounts.get()
 
 		return accounts.map((account) => {
-      account.address = formatAddress(account.address, BSX_PREFIX)
+      account.address = formatAddress(account.address, AHK_PREFIX)
 			return {
 				...account,
 				source: this._extension?.name as string,

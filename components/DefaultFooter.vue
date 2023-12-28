@@ -38,7 +38,7 @@
           <br />
           The source code is available on
           <a
-            href="https://github.com/roiLeo/bsx-shop"
+            href="https://github.com/roiLeo/stupendous-shop"
             target="_blank"
             rel="noopener noreferrer"
             class="underline hover:no-underline hover:text-gray-600 transition"

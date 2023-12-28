@@ -1,17 +1,20 @@
 import { extendFields, getClient } from '@kodadot1/uniquery'
 
 interface State {
-  collectionId: string
   items: []
+  collection: []
+  collectionId: string
 }
 
 export const useProductsStore = defineStore('products', {
   state: (): State => ({
-    collectionId: '1825819407',
     items: [],
+    collection: [],
+    collectionId: '136',
   }),
   getters: {
     getItems: (state) => state.items,
+    getCollection: (state) => state.collection,
     getCollectionId: (state) => state.collectionId,
   },
   actions: {
@@ -19,13 +22,19 @@ export const useProductsStore = defineStore('products', {
       this.collectionId = id
     },
     async fetchItems() {
-      const client = getClient('bsx')
+      const client = getClient('ahk')
       const query = client.itemListByCollectionId(this.collectionId, {
         fields: extendFields(['meta', 'price']),
         orderBy: 'createdAt_ASC',
       })
       const { data } = await client.fetch(query)
       this.items = data.items
+    },
+    async fetchCollection() {
+      const client = getClient('ahk')
+      const query = client.collectionById(this.collectionId, extendFields(['meta']))
+      const { data } = await client.fetch(query)
+      this.collection = data.collection
     }
   },
 })

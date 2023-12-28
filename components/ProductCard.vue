@@ -16,25 +16,34 @@
         class="absolute bottom-0 right-0 mr-2 mb-2 border border-gray-200 dark:border-gray-700 !rounded-full"
       />
 		</div>
-		<div class="p-4 border-t border-gray-200 dark:border-gray-700">
+		<div class="p-4 border-y border-gray-200 dark:border-gray-700">
       <nuxt-link :to="`/products/${item.id}`">
         {{ item.name }}
       </nuxt-link>
 
-			<p class="block py-2 font-normal leading-5 typography-text-sm text-neutral-700">
+			<p class="block py-2 font-normal leading-5 typography-text-sm text-neutral-400">
 				{{ description }}
 			</p>
-			<span class="block pb-2 font-bold typography-text-lg" v-if="price > 0">{{ formatPrice(price) }}</span>
-      <UButton
-        block
-        class="my-12"
-        size="sm"
-        icon="i-heroicons-shopping-cart"
-        v-if="!hasOwner"
-      >
-        {{ $t('action.add_to_cart') }}
-      </UButton>
 		</div>
+
+    <div class="heading heading flex h-[3.8rem] items-center justify-between px-5 font-medium leading-none">
+      <template v-if="price > 0">
+        <div>
+          <!-- <span class="block pb-2 font-bold typography-text-lg" ></span> -->
+          {{ formatPrice(price) }}
+        </div>
+        <UButton
+          square
+          variant="ghost"
+          size="sm"
+          icon="i-heroicons-shopping-cart"
+          v-if="price > 0"
+        />
+      </template>
+      <small v-else class="text-neutral-500">
+        Not for sale
+      </small>
+    </div>
 	</div>
 </template>
 
