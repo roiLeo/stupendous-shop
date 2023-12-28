@@ -11,7 +11,7 @@
       <div class="text-left truncate">
         <p>Signed in as</p>
         <p class="truncate font-medium text-gray-900 dark:text-white">
-          {{ item.label }}
+          {{ shortAddress(item.label) }}
         </p>
       </div>
     </template>

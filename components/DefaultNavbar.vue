@@ -1,5 +1,4 @@
 <template>
-  <!-- <header class="flex justify-center w-full h-16 md:h-20"> -->
   <header class="bg-background/75 backdrop-blur border-b border-gray-200 dark:border-gray-800 -mb-px sticky top-0 z-50">
     <div class="mx-auto flex items-center justify-between gap-3 h-16 max-w-[1536px] w-full">
       <UButton
