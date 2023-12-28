@@ -10,7 +10,7 @@
 		{{ $t('action.login') }}
 	</UButton>
 
-  <WalletModal v-show="isWalletModalOpen" @close-modal="toggleWalletModal" />
+  <WalletModal v-model="isWalletModalOpen" @close-modal="toggleWalletModal" />
 </template>
 
 <script lang="ts" setup>
