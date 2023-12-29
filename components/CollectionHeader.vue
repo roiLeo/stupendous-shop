@@ -26,7 +26,7 @@
       </div>
       <div class="flex max-w-[600px] flex-col gap-6 ">
         <div class="max-w-[600px] whitespace-pre-line leading-relaxed text-neutral-500">
-          {{ metaDescription }}
+          <div class="markdown-content" v-html="markdown.render(metaDescription)"></div>
           <UButton
             v-show="hasMaxDescriptionLength"
             size="sm"
@@ -68,6 +68,11 @@
 
 <script setup lang="ts">
 import { useProductsStore } from '@/stores/products'
+import markdownit from 'markdown-it'
+
+const markdown = new markdownit({
+  breaks: true
+})
 
 const MAX_CHARS = 240
 

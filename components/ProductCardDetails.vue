@@ -52,9 +52,7 @@
         </div>
       </div>
 
-      <div class="mt-4 text-lg text-gray-500 dark:text-gray-400 mb-8 space-y-6 font-light prose">
-        {{ description }}
-      </div>
+      <div v-html="markdown.render(description)" class="mt-4 text-lg text-gray-500 dark:text-gray-400 mb-8 space-y-6 font-light prose markdown-content"></div>
 
       <hr class="border-1 border-gray-200 dark:border-gray-700">
 
@@ -79,7 +77,12 @@
 </template>
 
 <script lang="ts" setup>
+import markdownit from 'markdown-it'
 import { useCartStore } from '@/stores/cart'
+
+const markdown = new markdownit({
+  breaks: true
+})
 const props = defineProps(['item'])
 
 const cartStore = useCartStore()
