@@ -18,10 +18,10 @@
 		</div>
 		<div class="p-4 border-y border-gray-200 dark:border-gray-700">
       <nuxt-link :to="`/products/${item.id}`" class="max-w-full self-start text-sm hover:underline">
-        {{ item.name }}
+        {{ item.name }} #{{ item.sn }}
       </nuxt-link>
 
-			<p class="block py-2 font-normal leading-5 text-sm text-neutral-400">
+			<p class="block py-2 font-normal leading-5 text-sm truncate text-neutral-400">
 				{{ description }}
 			</p>
 		</div>

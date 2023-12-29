@@ -28,7 +28,7 @@ export const useProductsStore = defineStore('products', {
     async fetchItems() {
       const client = getClient(this.chain)
       const query = client.itemListByCollectionId(this.collectionId, {
-        fields: extendFields(['meta', 'price']),
+        fields: extendFields(['meta', 'price', 'sn']),
         orderBy: 'createdAt_ASC',
       })
       const { data } = await client.fetch(query)

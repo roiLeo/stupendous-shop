@@ -33,17 +33,29 @@ export function formatAddress(address: string, ss58Format: number) {
 }
 
 export function formatPrice(price?: bigint | string) {
+  const config = useRuntimeConfig()
   const value = BigInt(price || BigInt(0))
   const magic = formatBalance(value, {
-    decimals: 12,
+    decimals: config.public.CHAIN === 'ahp' ? 10 : 12,
     forceUnit: '-',
     withZero: false,
     withUnit: false,
   })
   const intl = new Intl.NumberFormat('fr-FR', {
     style: 'currency',
-    currency: 'KSM',
+    currency: getChainCurrency(config.public.CHAIN),
     useGrouping: false,
   })
   return intl.format(Number(magic)).replace(',', '.')
+}
+
+export function getChainCurrency(chain: string) {
+  switch (chain) {
+    case 'ksm':
+    case 'ahk':
+      return 'KSM'
+    case 'dot':
+    case 'ahp':
+      return 'DOT'
+  }
 }

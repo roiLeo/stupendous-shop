@@ -35,11 +35,11 @@
 
     <div class="mt-1 flex w-full flex-wrap items-center gap-6 xl:justify-end">
       <div class="flex flex-row items-center gap-2">
-        <div class="leading-6 tracking-wide">{{ formatPrice(collection.volume) }} KSM</div>
+        <div class="leading-6 tracking-wide">{{ formatPrice(collection.volume) }}</div>
         <div class="text-neutral-500">Volume</div>
       </div>
       <div class="flex flex-row items-center gap-2">
-        <div class="leading-6 tracking-wide">{{ formatPrice(collection.floor) }} KSM</div>
+        <div class="leading-6 tracking-wide">{{ formatPrice(collection.floor) }}</div>
         <div class="text-neutral-500">Floor price</div>
       </div>
       <!-- <div class="flex flex-row items-center gap-2">
