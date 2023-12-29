@@ -21,8 +21,8 @@ import { getClient, extendFields } from '@kodadot1/uniquery'
 
 const route = useRoute()
 const id = computed(() => route.params.id)
-
-const client = getClient('ahk')
+const config = useRuntimeConfig()
+const client = getClient(config.public.CHAIN)
 const query = client.itemById(String(id.value), extendFields(['meta', 'price']))
 const { data } = await client.fetch(query)
 const item = ref(data.item)

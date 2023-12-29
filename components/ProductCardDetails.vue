@@ -36,7 +36,7 @@
           <span>
             <a class="text-blue-500 hover:underline"
                 target="_blank"
-                :href="`https://beta.kodadot.xyz/ahk/u/${item.currentOwner}`">
+                :href="`https://beta.kodadot.xyz/${config.public.CHAIN}/u/${item.currentOwner}`">
               {{ shortAddress(item.currentOwner) }}
             </a>
           </span>
@@ -80,12 +80,14 @@
 
 <script lang="ts" setup>
 import { useCartStore } from '@/stores/cart'
-
 const props = defineProps(['item'])
+
+const cartStore = useCartStore()
+const config = useRuntimeConfig()
+
 const image = useSanitizeUri(props.item.meta?.image)
 const description = ref(props.item.meta?.description)
 const isAvailable = ref(props.item.price !== '0')
-const cartStore = useCartStore()
 
 const addToCart = () => {
   cartStore.addToCart(props.item)

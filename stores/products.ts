@@ -36,7 +36,10 @@ export const useProductsStore = defineStore('products', {
     },
     async fetchCollection() {
       const client = getClient(this.chain)
-      const query = client.collectionById(this.collectionId, extendFields(['meta']))
+      const query = client.collectionById(
+        this.collectionId,
+        extendFields(['meta', 'volume', 'nftCount', 'floor', 'ownerCount'])
+      )
       const { data } = await client.fetch(query)
       this.collection = data.collection
     }
