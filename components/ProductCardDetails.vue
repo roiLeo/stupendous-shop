@@ -88,7 +88,6 @@ const isAvailable = ref(props.item.price !== '0')
 const cartStore = useCartStore()
 
 const addToCart = () => {
-  // todo: toggle notification success
   cartStore.addToCart(props.item)
 }
 </script>

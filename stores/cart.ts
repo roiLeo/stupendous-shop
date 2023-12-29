@@ -3,6 +3,7 @@ interface State {
   loading: boolean
   error: any
 }
+const toast = useToast()
 
 export const useCartStore = defineStore('cart', {
   state: (): State => ({
@@ -30,6 +31,7 @@ export const useCartStore = defineStore('cart', {
       } else {
         product.quantity = 1
         this.cart.push(product)
+        toast.add({ title: `"${product.name}" added to cart` })
       }
     },
     removeProductFromCart(product) {

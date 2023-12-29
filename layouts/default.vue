@@ -1,7 +1,10 @@
 <template>
-  <UContainer>
-    <DefaultNavbar />
-    <NuxtPage />
-  </UContainer>
-  <DefaultFooter />
+  <div>
+    <UContainer>
+      <DefaultNavbar />
+      <NuxtPage />
+    </UContainer>
+    <UNotifications />
+    <DefaultFooter />
+  </div>
 </template>

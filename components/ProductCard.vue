@@ -29,7 +29,6 @@
     <div class="heading heading flex h-[3.8rem] items-center justify-between px-4 font-medium leading-none">
       <template v-if="price > 0">
         <div>
-          <!-- <span class="block pb-2 font-bold typography-text-lg" ></span> -->
           {{ formatPrice(price) }}
         </div>
         <UButton
@@ -38,6 +37,7 @@
           size="sm"
           icon="i-heroicons-shopping-cart"
           v-if="price > 0"
+          @click="addToCart"
         />
       </template>
       <small v-else class="text-neutral-500">
@@ -52,7 +52,9 @@ const props = defineProps(['item'])
 const image = useSanitizeUri(props.item.meta?.image)
 const price = ref(props.item.price)
 const description = ref(props.item.meta?.description)
-const hasOwner = ref(props.item.currentOwner)
+const cartStore = useCartStore()
 
-// { "id": "1825819407-57", "createdAt": "2022-12-05T08:42:06.595000Z", "name": "KoDragon#55", "metadata": "ipfs://ipfs/bafkreie7mgymfpy7oiyz2v2sd5utwb44fcvutrveqrkswieg2cpm7evsqm", "currentOwner": "bXkSjdJoRueC7TCPVs4LAVFa8BiPNwZPZXsfzHdt95MSL2NMp", "issuer": "bXmx9pNXZw6dYkwaoafJyTrAZVQ1znGq8boJHC2MfQwgGLxPz" }
+const addToCart = () => {
+  cartStore.addToCart(props.item)
+}
 </script>
