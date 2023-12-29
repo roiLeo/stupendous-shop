@@ -19,7 +19,6 @@
             >Nuxt</a
           >
           &amp;
-          <s>VueStorefront UI</s>&nbsp;
           <a
             href="https://ui.nuxt.com/"
             target="_blank"

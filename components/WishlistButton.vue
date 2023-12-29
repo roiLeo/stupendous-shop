@@ -1,7 +1,7 @@
 <template>
   <UButton
     variant="ghost"
-    :ui="{ rounded: 'rounded-full bg-white' }"
+    :ui="{ rounded: 'rounded-full' }"
     :icon="isInList ? 'i-heroicons-heart-20-solid' : 'i-heroicons-heart'"
     aria-label="Add to wishlist"
     @click="toggleWishlist"

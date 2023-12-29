@@ -9,7 +9,7 @@
 		</form> -->
 
 		<!-- {{ items }} -->
-		<div class="grid lg:grid-cols-6 md:grid-cols-4 xs:grid-cols-2 gap-4 py-4">
+		<div class="grid lg:grid-cols-5 md:grid-cols-4 xs:grid-cols-2 gap-4 py-4">
 			<ProductCard v-for="item in items" :key="item.id" :item="item" />
 		</div>
 	</div>

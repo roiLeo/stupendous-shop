@@ -11,7 +11,6 @@
   },
   "devDependencies": {
     "@nuxtjs/i18n": "^8.0.0",
-    "@storefront-ui/vue": "^2.0.0",
     "nuxt": "^3.8"
   },
   "dependencies": {

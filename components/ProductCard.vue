@@ -17,16 +17,16 @@
       />
 		</div>
 		<div class="p-4 border-y border-gray-200 dark:border-gray-700">
-      <nuxt-link :to="`/products/${item.id}`">
+      <nuxt-link :to="`/products/${item.id}`" class="max-w-full self-start text-sm hover:underline">
         {{ item.name }}
       </nuxt-link>
 
-			<p class="block py-2 font-normal leading-5 typography-text-sm text-neutral-400">
+			<p class="block py-2 font-normal leading-5 text-sm text-neutral-400">
 				{{ description }}
 			</p>
 		</div>
 
-    <div class="heading heading flex h-[3.8rem] items-center justify-between px-5 font-medium leading-none">
+    <div class="heading heading flex h-[3.8rem] items-center justify-between px-4 font-medium leading-none">
       <template v-if="price > 0">
         <div>
           <!-- <span class="block pb-2 font-bold typography-text-lg" ></span> -->
