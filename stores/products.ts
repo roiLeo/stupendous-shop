@@ -4,13 +4,17 @@ interface State {
   items: []
   collection: []
   collectionId: string
+  chain: string
 }
+
+const config = useRuntimeConfig()
 
 export const useProductsStore = defineStore('products', {
   state: (): State => ({
     items: [],
     collection: [],
-    collectionId: '136',
+    collectionId: config.public.COLLECTION_ID,
+    chain: config.public.CHAIN,
   }),
   getters: {
     getItems: (state) => state.items,
@@ -22,7 +26,7 @@ export const useProductsStore = defineStore('products', {
       this.collectionId = id
     },
     async fetchItems() {
-      const client = getClient('ahk')
+      const client = getClient(this.chain)
       const query = client.itemListByCollectionId(this.collectionId, {
         fields: extendFields(['meta', 'price']),
         orderBy: 'createdAt_ASC',
@@ -31,7 +35,7 @@ export const useProductsStore = defineStore('products', {
       this.items = data.items
     },
     async fetchCollection() {
-      const client = getClient('ahk')
+      const client = getClient(this.chain)
       const query = client.collectionById(this.collectionId, extendFields(['meta']))
       const { data } = await client.fetch(query)
       this.collection = data.collection

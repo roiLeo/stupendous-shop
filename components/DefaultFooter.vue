@@ -1,15 +1,15 @@
 <template>
   <footer class="flex flex-col justify-center mx-auto w-full">
-    <hr class="w-full border-1 border-gray-400 mb-4" />
+    <hr class="w-full border-1 border-gray-200 dark:border-gray-700 mb-4" />
 
     <div class="px-5 pb-8">
-      <div class="container mx-auto text-center text-gray-500 text-sm">
-        <p class="mb-3 font-semibold">
+      <div class="container mx-auto text-center">
+        <p class="mb-3 font-semibold text-gray-500 text-sm">
           © {{ new Date().getFullYear() }}
           roiLeo. All rights reserved.
         </p>
 
-        <p class="text-sm text-gray-700">
+        <p class="text-sm text-gray-700 dark:text-gray-500">
           This website is built with
           <a
             href="https://nuxt.com/"

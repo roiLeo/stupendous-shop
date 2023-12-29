@@ -29,4 +29,10 @@ export default defineNuxtConfig({
   pinia: {
     autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
   },
-});
+  runtimeConfig: {
+    public: {
+      CHAIN: process.env.CHAIN,
+      COLLECTION_ID: process.env.COLLECTION_ID,
+    },
+  },
+})

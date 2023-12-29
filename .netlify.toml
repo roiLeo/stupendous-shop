@@ -1,0 +1,3 @@
+[template.environment]
+  CHAIN = "which chain is the collection on (bsx/ahk/ahp)"
+  COLLECTION_ID = "set your collection id here"

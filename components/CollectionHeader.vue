@@ -5,9 +5,7 @@
         <div class="relative h-[108px] w-[108px]">
           <div class="aspect-square overflow-hidden rounded-[18%]">
             <div class="relative h-full w-full">
-              <img class="m-0 bg-background-subdued p-0"
-                   :src="image"
-                   loading="lazy">
+              <img class="m-0 bg-background-subdued p-0" :src="image" loading="lazy">
             </div>
           </div>
         </div>
@@ -23,10 +21,7 @@
         <div class="text-text-subdued">Created by</div>
         <a class="flex font-medium"
            :href="`https://beta.kodadot.xyz/ahk/u/${collection.issuer}`">
-          <Polkadot size="24"
-                    theme="polkadot"
-                    :address="collection.issuer"
-                    class="mx-2" />
+          <Polkadot size="24" theme="polkadot" :address="collection.issuer" class="mx-2" />
           <div class="hover:underline focus:underline">{{ shortAddress(collection.issuer) }}</div>
         </a>
       </div>
@@ -34,20 +29,8 @@
         <div class="max-w-[600px] whitespace-pre-line leading-relaxed text-neutral-500">
           {{ meta.description }}
         </div>
-        <!-- <div class="flex flex-wrap gap-4">
-          <a class="c-grsoip"
-             href="https://www.explorerguild.io/"
-             target="_blank">Website</a>
-          <a class="c-grsoip"
-             href="https://twitter.com/sigleapp"
-             target="_blank">Twitter</a>
-          <a class="c-grsoip"
-             href="https://discord.gg/X2Dbz3xbrs"
-             target="_blank">Discord</a>
-          <a class="c-grsoip"
-             href="https://explorer.stacks.co/txid/SP2X0TZ59D5SZ8ACQ6YMCHHNR2ZN51Z32E2CJ173.the-explorer-guild"
-             target="_blank">Contract</a>
-        </div> -->
+
+        <!-- TODO: custom links -->
       </div>
     </div>
 
