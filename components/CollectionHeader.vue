@@ -5,7 +5,7 @@
         <div class="relative h-[108px] w-[108px]">
           <div class="aspect-square overflow-hidden rounded-[18%]">
             <div class="relative h-full w-full">
-              <img class="m-0 bg-background-subdued p-0" :src="image" loading="lazy">
+              <img class="m-0 p-0" :src="image" loading="lazy">
             </div>
           </div>
         </div>
@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="mb-3 flex max-w-[640px] flex-wrap items-center gap-1 self-start leading-normal">
-        <div class="text-text-subdued">{{ $t('text.created_by') }}</div>
+        <div class="text-neutral-600 dark:text-neutral-400">{{ $t('text.created_by') }}</div>
         <a class="flex font-medium"
            :href="`https://beta.kodadot.xyz/${config.public.CHAIN}/u/${collection.issuer}`">
           <Polkadot size="24" theme="polkadot" :address="collection.issuer" class="mx-2" />
