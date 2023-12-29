@@ -18,6 +18,7 @@
     "availability": "Availability",
     "available": "In Stock",
     "unavailable": "Unavailable",
+    "created_by": "Created by",
     "owner": "Owner"
   }
 }

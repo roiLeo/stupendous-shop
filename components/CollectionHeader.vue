@@ -17,7 +17,7 @@
         </div>
       </div>
       <div class="mb-3 flex max-w-[640px] flex-wrap items-center gap-1 self-start leading-normal">
-        <div class="text-text-subdued">Created by</div>
+        <div class="text-text-subdued">{{ $t('text.created_by') }}</div>
         <a class="flex font-medium"
            :href="`https://beta.kodadot.xyz/${config.public.CHAIN}/u/${collection.issuer}`">
           <Polkadot size="24" theme="polkadot" :address="collection.issuer" class="mx-2" />
@@ -26,7 +26,15 @@
       </div>
       <div class="flex max-w-[600px] flex-col gap-6 ">
         <div class="max-w-[600px] whitespace-pre-line leading-relaxed text-neutral-500">
-          {{ meta.description }}
+          {{ metaDescription }}
+          <UButton
+            v-show="hasMaxDescriptionLength"
+            size="sm"
+            color="primary"
+            variant="link"
+            :label="!toggleShowMore ? 'Show more' : 'Show less'"
+            @click="toggleShowMore = !toggleShowMore"
+          />
         </div>
 
         <!-- TODO: custom links -->
@@ -61,6 +69,8 @@
 <script setup lang="ts">
 import { useProductsStore } from '@/stores/products'
 
+const MAX_CHARS = 240
+
 const productsStore = useProductsStore()
 const config = useRuntimeConfig()
 
@@ -69,4 +79,8 @@ await useAsyncData('collection', () => productsStore.fetchCollection())
 const collection = computed(() => productsStore.getCollection)
 const meta = ref(collection.value.meta)
 const image = useSanitizeUri(meta.value.image)
+
+const toggleShowMore = ref(false)
+const hasMaxDescriptionLength = ref((meta.value.description.length || 0) > MAX_CHARS)
+const metaDescription = computed(() => hasMaxDescriptionLength.value && !toggleShowMore.value ? meta.value.description?.slice(0, MAX_CHARS)+ '...' : meta.value.description)
 </script>
