@@ -5,6 +5,13 @@
   transform: translateY(62px)!important;
 }
 
+.markdown-content a {
+  color: #3B82F6;
+}
+.markdown-content a:hover {
+  text-decoration: underline;
+}
+
 /* --colors-primary-50: 249 254 253;
 --colors-primary-100: 239 254 250;
 --colors-primary-200: 225 251 244;
