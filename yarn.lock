@@ -1617,9 +1617,9 @@
     tslib "^2.6.2"
 
 "@polkadot/ui-shared@^3.1.4":
-  version "3.6.4"
-  resolved "https://registry.yarnpkg.com/@polkadot/ui-shared/-/ui-shared-3.6.4.tgz#cc392313c7859b93e0d7c480905a74528175e5b6"
-  integrity sha512-nDlfKRPLxjSFm0769Nmkm+8vamH4HwZtKYZ5X+e2yDF1QkgaRUIc9+xJ/eeXp5lkfH985s0IAEmeNw8dQ0SbYg==
+  version "3.6.5"
+  resolved "https://registry.yarnpkg.com/@polkadot/ui-shared/-/ui-shared-3.6.5.tgz#018f1e06018fb1c6b0eb60e2c6d438380665e4fd"
+  integrity sha512-ZBkOcKxun+lwCkokDDX71Ajir9yNYc0VuyUik+76xFvoHYkKdQ+qInv2GS6caWAtTSfIxb4EKNN2Euc9m8un1A==
   dependencies:
     colord "^2.9.3"
     tslib "^2.6.2"
