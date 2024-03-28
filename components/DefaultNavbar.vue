@@ -3,7 +3,6 @@
     <div class="mx-auto flex items-center justify-between gap-3 h-16 max-w-[1536px] w-full">
       <UButton
         square
-        class="block !px-2 mr-auto"
         icon="i-heroicons-home"
         size="lg"
         color="gray"
