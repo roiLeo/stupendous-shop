@@ -1,4 +1,6 @@
+import { MetaMaskInpageProvider } from '@metamask/providers'
 import { PolkadotjsWallet } from '~/utils/wallets/PolkadotjsWallet'
+import { MetamaskWallet } from '~/utils/wallets/MetamaskWallet'
 import { LedgerWallet } from '~/utils/wallets/LedgerWallet'
 import { MathWallet } from '~/utils/wallets/MathWallet'
 import { NovaWallet } from '~/utils/wallets/NovaWallet'
@@ -6,11 +8,10 @@ import { FearlessWallet } from '~/utils/wallets/FearlessWallet'
 import { SubWallet } from '~/utils/wallets/SubWallet'
 import { TalismanWallet } from '~/utils/wallets/TalismanWallet'
 
-
 // source as 'polkadot-js' in mobile app
 export enum SupportWalletExtension {
   PolkadotJs = 'polkadot-js',
-  MetaMask = 'metamask',
+  Metamask = 'metamask',
   Clover = 'clover',
   Ledger = 'ledger',
   Math = 'polkadot-js', // mathwallet
@@ -22,6 +23,7 @@ export enum SupportWalletExtension {
 
 export const SubstrateWallets = [
   SupportWalletExtension.PolkadotJs,
+  SupportWalletExtension.Metamask,
   SupportWalletExtension.Clover,
   SupportWalletExtension.Math,
   SupportWalletExtension.Nova,
@@ -35,7 +37,14 @@ export const SubstrateWallets = [
 //   ? [new MathWallet(), new NovaWallet()]
 //   : [new LedgerWallet(), new PolkadotjsWallet(), new SubWallet(), new TalismanWallet()]
 
-export const SupportedWallets = [new LedgerWallet(), new NovaWallet(), new PolkadotjsWallet(), new SubWallet(), new TalismanWallet()]
+export const SupportedWallets = [
+  new LedgerWallet(),
+  new NovaWallet(),
+  new PolkadotjsWallet(),
+  new MetamaskWallet(),
+  new SubWallet(),
+  new TalismanWallet(),
+]
 
 export function getWalletBySource(
   source: string | unknown
@@ -63,15 +72,15 @@ export interface WalletAccount {
 }
 
 interface WalletData {
-	extensionName: string
-	source: string
-	name: string
-	walletUrl: string
-	guideUrl: string
-	img: string
-	isBrowserExtension: boolean
-	isMobileApp: boolean
-	isPopular: boolean
+  extensionName: string
+  source: string
+  name: string
+  walletUrl: string
+  guideUrl: string
+  img: string
+  isBrowserExtension: boolean
+  isMobileApp: boolean
+  isPopular: boolean
 }
 
 interface WalletExtension {
@@ -100,6 +109,20 @@ interface Connector {
 
   // The subscribe to accounts function
   subscribeAccounts: (callback: SubscriptionFn) => unknown
+}
+
+export interface EvmWalletInfo extends WalletData {
+  isSetGlobalString: string
+  initEvent?: string
+}
+
+export interface EvmWallet extends EvmWalletInfo {
+  installed: boolean
+  extension: MetaMaskInpageProvider | undefined
+  isReady: Promise<MetaMaskInpageProvider | undefined>
+
+  request<T>(args: any): Promise<any>
+  enable(): Promise<boolean>
 }
 
 export interface Wallet

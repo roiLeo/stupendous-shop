@@ -20,14 +20,26 @@ export const useConnectWallet = () => {
     })
   }
 
-  const setWallet = (wallet: Wallet) => {
+  const setWallet = (wallet: any) => {
     nextTick(async () => {
       hasWalletProviderExtension.value = true
       hasSelectedWalletProvider.value = true
       selectedWalletProvider.value = wallet
 
       if (wallet.installed) {
-        walletAccounts.value = (await wallet.getAccounts()) as any
+        if (wallet.isEvmWallet) {
+          console.log('EVM wallet detected')
+          wallet
+            .getAccounts()
+            .then((data: string[]) => {
+              walletAccounts.value = data.map(account => ({ address: account }))
+            })
+            .catch((e: any) => {
+              console.error('init account error', e)
+            })
+        } else {
+          walletAccounts.value = (await wallet.getAccounts()) as any
+        }
       } else {
         hasEnabledWalletProvider.value = false
         guideUrl.value = wallet.guideUrl
