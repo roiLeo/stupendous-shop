@@ -8,11 +8,16 @@
     "add_to_cart": "Add to cart",
     "back_to_list": "Back to list",
     "checkout": "Checkout",
-    "login": "Connect wallet"
+    "login": "Connect wallet",
+    "create_nft": "Create your NFT",
+    "clear": "Clear",
+    "undo": "Undo"
   },
   "messages": {
     "close_drawer": "You can close Drawer by clicking outside or focus and use ESC button",
-    "empty_wishlist": "You have no items in your wishlist"
+    "empty_wishlist": "You have no items in your wishlist",
+    "mint_draw_title": "Create a drawing and publish it on-chain!",
+    "mint_draw_alert": "This image is intended for use on the blockchain. Please note that sensitive drawings may be removed without notice."
   },
   "text": {
     "availability": "Availability",

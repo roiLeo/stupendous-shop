@@ -8,11 +8,16 @@
     "add_to_cart": "Ajouter au panier",
     "back_to_list": "Retour à la liste",
     "checkout": "Payer",
-    "login": "Connexion"
+    "login": "Connexion",
+    "create_nft": "Créez votre NFT",
+    "clear": "Effacer",
+    "undo": "Annuler"
   },
   "messages": {
     "close_drawer": "Vous pouvez fermer le menu en cliquant à l'extérieur ou sur le focus et en utilisant le bouton ESC",
-    "empty_wishlist": "Vous n'avez aucun article dans votre liste d'envies"
+    "empty_wishlist": "Vous n'avez aucun article dans votre liste d'envies",
+    "mint_draw_title": "Créez un dessin et publiez-le sur la blockchaîne !",
+    "mint_draw_alert": "Cette image est destinée à être utilisée sur la blockchain. Veuillez noter que les dessins sensibles peuvent être supprimés sans préavis."
   },
   "text": {
     "availability": "Disponibilité",
