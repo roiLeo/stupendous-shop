@@ -13,7 +13,7 @@ dependencies:
     version: 0.5.1
   '@metamask/providers':
     specifier: ^17.0.0
-    version: 17.0.0(webextension-polyfill@0.12.0)
+    version: 17.1.0(webextension-polyfill@0.12.0)
   '@metamask/types':
     specifier: ^1.1.0
     version: 1.1.0
@@ -1166,9 +1166,9 @@ packages:
       - encoding
       - supports-color
 
-  /@metamask/json-rpc-engine@8.0.2:
-    resolution: {integrity: sha512-IoQPmql8q7ABLruW7i4EYVHWUbF74yrp63bRuXV5Zf9BQwcn5H9Ww1eLtROYvI1bUXwOiHZ6qT5CWTrDc/t/AA==}
-    engines: {node: '>=16.0.0'}
+  /@metamask/json-rpc-engine@9.0.0:
+    resolution: {integrity: sha512-/zVBHbDG2VsJMUxKIcNGwg/f9NbMcJxee1qWRtC5HHmyCv5uqfArxOK6yHpjW02d9ENtrj18uWUtP7/ofSoeoQ==}
+    engines: {node: ^18.18 || >=20}
     dependencies:
       '@metamask/rpc-errors': 6.3.0
       '@metamask/safe-event-emitter': 3.1.1
@@ -1177,11 +1177,11 @@ packages:
       - supports-color
     dev: false
 
-  /@metamask/json-rpc-middleware-stream@7.0.2:
-    resolution: {integrity: sha512-yUdzsJK04Ev98Ck4D7lmRNQ8FPioXYhEUZOMS01LXW8qTvPGiRVXmVltj2p4wrLkh0vW7u6nv0mNl5xzC5Qmfg==}
-    engines: {node: '>=16.0.0'}
+  /@metamask/json-rpc-middleware-stream@8.0.0:
+    resolution: {integrity: sha512-ZSoOnOnTO212FnXRnjCBfoiwv3IBnprbc9C2yPeXXpDzoc0NrH5MGYL5S8pcTVVDHjjCPJS5J6EDTx7KE3VSdg==}
+    engines: {node: ^18.18 || >=20}
     dependencies:
-      '@metamask/json-rpc-engine': 8.0.2
+      '@metamask/json-rpc-engine': 9.0.0
       '@metamask/safe-event-emitter': 3.1.1
       '@metamask/utils': 8.5.0
       readable-stream: 3.6.2
@@ -1197,20 +1197,20 @@ packages:
       readable-stream: 3.6.2
     dev: false
 
-  /@metamask/providers@17.0.0(webextension-polyfill@0.12.0):
-    resolution: {integrity: sha512-l4nI3d7XViq57rTIHMR3FNqzsrTMrf5JMKcxnA5xCvS2Xj85/PeQeTG4jGmms3WWhc/nouZoEs99z/pWFJcbig==}
+  /@metamask/providers@17.1.0(webextension-polyfill@0.12.0):
+    resolution: {integrity: sha512-AendZ3KZFbhG30j9JqDnfR7FspB7CUTcICeJRB/nJYxGAiaZivn1UCqIN+ntpfON6Q+mjCbhz9YeqK63Y3ALqw==}
     engines: {node: ^18.18 || >=20}
     peerDependencies:
       webextension-polyfill: ^0.10.0 || ^0.11.0 || ^0.12.0
     dependencies:
-      '@metamask/json-rpc-engine': 8.0.2
-      '@metamask/json-rpc-middleware-stream': 7.0.2
+      '@metamask/json-rpc-engine': 9.0.0
+      '@metamask/json-rpc-middleware-stream': 8.0.0
       '@metamask/object-multiplex': 2.0.0
       '@metamask/rpc-errors': 6.3.0
       '@metamask/safe-event-emitter': 3.1.1
       '@metamask/utils': 8.5.0
       detect-browser: 5.3.0
-      extension-port-stream: 3.0.0
+      extension-port-stream: 4.1.0(webextension-polyfill@0.12.0)
       fast-deep-equal: 3.1.3
       is-stream: 2.0.1
       readable-stream: 3.6.2
@@ -1234,8 +1234,8 @@ packages:
     engines: {node: '>=12.0.0'}
     dev: false
 
-  /@metamask/superstruct@3.0.0:
-    resolution: {integrity: sha512-TOm+Lt/lCJk9j/3QT2LucrPewRmqI7/GKT+blK2IIOAkBMS+9TmeNjd2Y+TlfpSSYstaYsGZyz1XwpiTCg6RLA==}
+  /@metamask/superstruct@3.1.0:
+    resolution: {integrity: sha512-N08M56HdOgBfRKkrgCMZvQppkZGcArEop3kixNEtVbJKm6P9Cfg0YkI6X0s1g78sNrj2fWUwvJADdZuzJgFttA==}
     engines: {node: '>=16.0.0'}
     dev: false
 
@@ -1250,7 +1250,7 @@ packages:
     engines: {node: '>=16.0.0'}
     dependencies:
       '@ethereumjs/tx': 4.2.0
-      '@metamask/superstruct': 3.0.0
+      '@metamask/superstruct': 3.1.0
       '@noble/hashes': 1.4.0
       '@scure/base': 1.1.7
       '@types/debug': 4.1.12
@@ -4994,9 +4994,11 @@ packages:
   /exponential-backoff@3.1.1:
     resolution: {integrity: sha512-dX7e/LHVJ6W3DE1MHWi9S1EYzDESENfLrYohG2G++ovZrYOkm4Knwa0mc1cn84xJOR4KEU0WSchhLbd0UklbHw==}
 
-  /extension-port-stream@3.0.0:
-    resolution: {integrity: sha512-an2S5quJMiy5bnZKEf6AkfH/7r8CzHvhchU40gxN+OM6HPhe7Z9T1FUychcf2M9PpPOO0Hf7BAEfJkw2TDIBDw==}
+  /extension-port-stream@4.1.0(webextension-polyfill@0.12.0):
+    resolution: {integrity: sha512-8K4I9+I++cwxD0ICh7U/nYc9ynf0ZUgEBNbcPs6Fk9nDAzKNhXUHByvJDO9VZ2aZzbEstjRylOac1HSoJK2K+g==}
     engines: {node: '>=12.0.0'}
+    peerDependencies:
+      webextension-polyfill: ^0.10.0 || ^0.11.0 || ^0.12.0
     dependencies:
       readable-stream: 3.6.2
       webextension-polyfill: 0.12.0
