@@ -28,7 +28,7 @@ dependencies:
     version: 12.1.1
   '@polkadot/extension-dapp':
     specifier: ^0.48.0
-    version: 0.48.1(@polkadot/api@12.1.1)(@polkadot/util-crypto@12.6.2)(@polkadot/util@12.6.2)
+    version: 0.48.2(@polkadot/api@12.1.1)(@polkadot/util-crypto@12.6.2)(@polkadot/util@12.6.2)
   '@polkadot/keyring':
     specifier: ^12.0.0
     version: 12.6.2(@polkadot/util-crypto@12.6.2)(@polkadot/util@12.6.2)
@@ -2516,8 +2516,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@polkadot/extension-dapp@0.48.1(@polkadot/api@12.1.1)(@polkadot/util-crypto@12.6.2)(@polkadot/util@12.6.2):
-    resolution: {integrity: sha512-lEEqthIEepx6HeysSBNkiar/gi4T9k65setbxBQhAb97aEuxzlrnqmcVQMX44Hf+efkiADLEIchlVsnoMiUTSQ==}
+  /@polkadot/extension-dapp@0.48.2(@polkadot/api@12.1.1)(@polkadot/util-crypto@12.6.2)(@polkadot/util@12.6.2):
+    resolution: {integrity: sha512-16k9p1pd2K/gSwtfICJR/5zjzDlfM7OLnBYnKp3NFZQoTf7zkKNY7nWsGpBPlq5FYP1RStsZIh3LAd0j8IVh3g==}
     engines: {node: '>=18'}
     peerDependencies:
       '@polkadot/api': '*'
@@ -2525,7 +2525,7 @@ packages:
       '@polkadot/util-crypto': '*'
     dependencies:
       '@polkadot/api': 12.1.1
-      '@polkadot/extension-inject': 0.48.1(@polkadot/api@12.1.1)(@polkadot/util@12.6.2)
+      '@polkadot/extension-inject': 0.48.2(@polkadot/api@12.1.1)(@polkadot/util@12.6.2)
       '@polkadot/util': 12.6.2
       '@polkadot/util-crypto': 12.6.2(@polkadot/util@12.6.2)
       tslib: 2.6.3
@@ -2535,8 +2535,8 @@ packages:
       - utf-8-validate
     dev: false
 
-  /@polkadot/extension-inject@0.48.1(@polkadot/api@12.1.1)(@polkadot/util@12.6.2):
-    resolution: {integrity: sha512-siv3YN/Cj6t01PFT5tfzB2p8UryhpV1cEWMViHxvoHL3Y9D6lCQDBTKkUSAUEG7dqczwHnizvdXBvF5HpZ42Ug==}
+  /@polkadot/extension-inject@0.48.2(@polkadot/api@12.1.1)(@polkadot/util@12.6.2):
+    resolution: {integrity: sha512-3/jFeTuIAhy6CwLVRBsztwfSP6UZuyrD2BXLyCkyhq2879iM9ixEpnOGgkafcIGAyPWGs0ZZBVtqd62Qa5iMcA==}
     engines: {node: '>=18'}
     peerDependencies:
       '@polkadot/api': '*'
