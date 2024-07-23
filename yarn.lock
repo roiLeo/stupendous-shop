@@ -999,23 +999,23 @@
     semver "^7.3.5"
     tar "^6.1.11"
 
-"@metamask/json-rpc-engine@^9.0.1":
-  version "9.0.1"
-  resolved "https://registry.yarnpkg.com/@metamask/json-rpc-engine/-/json-rpc-engine-9.0.1.tgz#202f6b5d24957c4bc949c113c3b60fa134478e11"
-  integrity sha512-A+iKxI/iMaOKYBcwsGQIaN+LAHOjVdogaGoOe8s52nLQuWmxwAzXIwlvm4RSAM4WG1XnoUPilFoGMHTx+fDteg==
+"@metamask/json-rpc-engine@^9.0.1", "@metamask/json-rpc-engine@^9.0.2":
+  version "9.0.2"
+  resolved "https://registry.yarnpkg.com/@metamask/json-rpc-engine/-/json-rpc-engine-9.0.2.tgz#2a060ff14748fec3b686cb6def55529f1dc547c0"
+  integrity sha512-wteoGUDhiqCgyO6Gdjnm6n+7raoRS+dRHOIsTc7LK2zpezAynav9BIK7QWPcJZeieMTSG5HuYrQf+epLbcdB/g==
   dependencies:
     "@metamask/rpc-errors" "^6.3.1"
     "@metamask/safe-event-emitter" "^3.0.0"
-    "@metamask/utils" "^9.0.0"
+    "@metamask/utils" "^9.1.0"
 
 "@metamask/json-rpc-middleware-stream@^8.0.1":
-  version "8.0.1"
-  resolved "https://registry.yarnpkg.com/@metamask/json-rpc-middleware-stream/-/json-rpc-middleware-stream-8.0.1.tgz#ba8503964897c0f9e170a363297feac080a86487"
-  integrity sha512-+ehe57lqDa/irLo677KZvV/AWLuSvbK58XY2o15Mdgg7Cbd7u+KbxqykZHEYlqDmEk7L0V/7c95dYLJV9OVeYg==
+  version "8.0.2"
+  resolved "https://registry.yarnpkg.com/@metamask/json-rpc-middleware-stream/-/json-rpc-middleware-stream-8.0.2.tgz#2063b7775264d04fca8506844aebe3c3bf1fb443"
+  integrity sha512-8z7GAUYj3EFVkxiTjaND2x9Q8iURoKhwIyzLMZChLTiJ/XKRJwvtJ9cG2KIeL3GnNsPkVH97xngRmTaYAM6yDg==
   dependencies:
-    "@metamask/json-rpc-engine" "^9.0.1"
+    "@metamask/json-rpc-engine" "^9.0.2"
     "@metamask/safe-event-emitter" "^3.0.0"
-    "@metamask/utils" "^9.0.0"
+    "@metamask/utils" "^9.1.0"
     readable-stream "^3.6.2"
 
 "@metamask/object-multiplex@^2.0.0":
@@ -1027,9 +1027,9 @@
     readable-stream "^3.6.2"
 
 "@metamask/providers@^17.0.0":
-  version "17.1.1"
-  resolved "https://registry.yarnpkg.com/@metamask/providers/-/providers-17.1.1.tgz#0a3a608b40ae2df29fa510b41fef7b97da2b16cc"
-  integrity sha512-b4vNTLbkVcoB36EkTNxftu4/JF6AFNBX8hFYQS5bSTw0CidXNkSjPDWAjmVwKddi046j+WhT4ev0rzhUn9kaVg==
+  version "17.1.2"
+  resolved "https://registry.yarnpkg.com/@metamask/providers/-/providers-17.1.2.tgz#bb29c9cbf66be4c3f83d3e24ffea93f750b3db39"
+  integrity sha512-hACtF02yaUYThvWrRtVU4JAc+ZLCZ4PJUYBw6dK9Rze50J7zCxtss2mB7H8w76iLx//b5hjgXx6y92gPVjuYWg==
   dependencies:
     "@metamask/json-rpc-engine" "^9.0.1"
     "@metamask/json-rpc-middleware-stream" "^8.0.1"
@@ -1066,10 +1066,10 @@
   resolved "https://registry.yarnpkg.com/@metamask/types/-/types-1.1.0.tgz#9bd14b33427932833c50c9187298804a18c2e025"
   integrity sha512-EEV/GjlYkOSfSPnYXfOosxa3TqYtIW3fhg6jdw+cok/OhMgNn4wCfbENFqjytrHMU2f7ZKtBAvtiP5V8H44sSw==
 
-"@metamask/utils@^9.0.0":
-  version "9.0.0"
-  resolved "https://registry.yarnpkg.com/@metamask/utils/-/utils-9.0.0.tgz#cbcdf90e2cfc425f67731fc50d44bdf501daae36"
-  integrity sha512-Q/PzQCm6rkmePxHghXgJuYEkVfSvwKLLFZwFtfmLAz4mxIPuFJSMawaJM7sfZsVybK5Bf9QaKAjgMvHk5iGGvA==
+"@metamask/utils@^9.0.0", "@metamask/utils@^9.1.0":
+  version "9.1.0"
+  resolved "https://registry.yarnpkg.com/@metamask/utils/-/utils-9.1.0.tgz#54e5afcec07e6032d4dd4171e862b36daa52d77e"
+  integrity sha512-g2REf+xSt0OZfMoNNdC4+/Yy8eP3KUqvIArel54XRFKPoXbHI6+YjFfrLtfykWBjffOp7DTfIc3Kvk5TLfuiyg==
   dependencies:
     "@ethereumjs/tx" "^4.2.0"
     "@metamask/superstruct" "^3.1.0"
@@ -6309,12 +6309,12 @@ semver@^6.0.0, semver@^6.3.1:
   resolved "https://registry.yarnpkg.com/semver/-/semver-6.3.1.tgz#556d2ef8689146e46dcea4bfdd095f3434dffcb4"
   integrity sha512-BR7VvDCVHO+q2xBEWskxS6DJE1qRnb7DxzUrogb71CWoSficBxYsiAGd+Kl0mmq/MprG9yArRkyrQxTO6XjMzA==
 
-semver@^7.3.4, semver@^7.3.5, semver@^7.6.2, semver@^7.6.3:
+semver@^7.3.4, semver@^7.3.5, semver@^7.5.4, semver@^7.6.2, semver@^7.6.3:
   version "7.6.3"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.3.tgz#980f7b5550bc175fb4dc09403085627f9eb33143"
   integrity sha512-oVekP1cKtI+CTDvHWYFUcMtsK/00wmAEfyqKfNdARm8u1wNVhSgaX7A8d4UuIlUI5e84iEwOhs7ZPYRmzU9U6A==
 
-semver@^7.5.4, semver@^7.6.0:
+semver@^7.6.0:
   version "7.6.2"
   resolved "https://registry.yarnpkg.com/semver/-/semver-7.6.2.tgz#1e3b34759f896e8f14d6134732ce798aeb0c6e13"
   integrity sha512-FNAIBWCx9qcRhoHcgcJ0gvU7SN1lYU2ZXuSfl04bSC5OpvDHFyJCjdNHomPXxjQlCBU67YW64PzY7/VIEH7F2w==
