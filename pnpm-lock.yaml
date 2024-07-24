@@ -34,7 +34,7 @@ dependencies:
     version: 13.0.2(@polkadot/util-crypto@13.0.2)(@polkadot/util@13.0.2)
   '@polkadot/ui-shared':
     specifier: ^3.1.4
-    version: 3.7.1(@polkadot/util-crypto@13.0.2)(@polkadot/util@13.0.2)
+    version: 3.8.2(@polkadot/util-crypto@13.0.2)(@polkadot/util@13.0.2)
   '@polkadot/util':
     specifier: ^13.0.0
     version: 13.0.2
@@ -2431,8 +2431,8 @@ packages:
       tslib: 2.6.3
     dev: false
 
-  /@polkadot/ui-shared@3.7.1(@polkadot/util-crypto@13.0.2)(@polkadot/util@13.0.2):
-    resolution: {integrity: sha512-fnKkw1SfzEsfeXTWsTHiU3z4NNdjOzzRG/Ex70LVs/gFAH2DFUVR0BEDkSEtNQkr8YjwKXudM7r2hsYq3MULLw==}
+  /@polkadot/ui-shared@3.8.2(@polkadot/util-crypto@13.0.2)(@polkadot/util@13.0.2):
+    resolution: {integrity: sha512-YBwWiUX3S30vp5mB09ZqfusBak5K4hOlJDlia1Z8mGu3IRFrZpMxd/enwL8LZgFA+VPc9PQSDQ3t6uL46Xbn4g==}
     engines: {node: '>=18'}
     peerDependencies:
       '@polkadot/util': '*'
