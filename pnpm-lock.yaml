@@ -40,7 +40,7 @@ dependencies:
     version: 13.0.2
   pinia:
     specifier: ^2.0.33
-    version: 2.1.7(vue@3.4.34)
+    version: 2.2.0(vue@3.4.34)
   signature_pad:
     specifier: ^5.0.2
     version: 5.0.2
@@ -2078,7 +2078,7 @@ packages:
     resolution: {integrity: sha512-6wT6TqY81n+7/x3Yhf0yfaJVKkZU42AGqOR0T3+UvChcaOJhSma7OWPN64v+ptYlznat+fS1VTwNAcbi2lzHnw==}
     dependencies:
       '@nuxt/kit': 3.12.1(rollup@4.19.0)
-      pinia: 2.1.7(vue@3.4.34)
+      pinia: 2.2.0(vue@3.4.34)
     transitivePeerDependencies:
       - '@vue/composition-api'
       - magicast
@@ -6669,8 +6669,8 @@ packages:
     engines: {node: '>=0.10.0'}
     dev: false
 
-  /pinia@2.1.7(vue@3.4.34):
-    resolution: {integrity: sha512-+C2AHFtcFqjPih0zpYuvof37SFxMQ7OEG2zV9jRI12i9BOy3YQVAHwdKtyyc8pDcDyIc33WCIsZaCFWU7WWxGQ==}
+  /pinia@2.2.0(vue@3.4.34):
+    resolution: {integrity: sha512-iPrIh26GMqfpUlMOGyxuDowGmYousTecbTHFwT0xZ1zJvh23oQ+Cj99ZoPQA1TnUPhU6AuRPv6/drkTCJ0VHQA==}
     peerDependencies:
       '@vue/composition-api': ^1.4.0
       typescript: '>=4.4.4'
@@ -6683,7 +6683,7 @@ packages:
     dependencies:
       '@vue/devtools-api': 6.6.3
       vue: 3.4.34
-      vue-demi: 0.14.8(vue@3.4.34)
+      vue-demi: 0.14.10(vue@3.4.34)
     dev: false
 
   /pirates@4.0.6:
@@ -8389,21 +8389,6 @@ packages:
 
   /vue-demi@0.14.10(vue@3.4.34):
     resolution: {integrity: sha512-nMZBOwuzabUO0nLgIcc6rycZEebF6eeUfaiQx9+WSk8e29IbLvPU9feI6tqW4kTo3hvoYAJkMh8n8D0fuISphg==}
-    engines: {node: '>=12'}
-    hasBin: true
-    requiresBuild: true
-    peerDependencies:
-      '@vue/composition-api': ^1.0.0-rc.1
-      vue: ^3.0.0-0 || ^2.6.0
-    peerDependenciesMeta:
-      '@vue/composition-api':
-        optional: true
-    dependencies:
-      vue: 3.4.34
-    dev: false
-
-  /vue-demi@0.14.8(vue@3.4.34):
-    resolution: {integrity: sha512-Uuqnk9YE9SsWeReYqK2alDI5YzciATE0r2SkA6iMAtuXvNTMNACJLJEXNXaEy94ECuBe4Sk6RzRU80kjdbIo1Q==}
     engines: {node: '>=12'}
     hasBin: true
     requiresBuild: true
