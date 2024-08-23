@@ -6180,9 +6180,9 @@ signal-exit@^4.0.1, signal-exit@^4.1.0:
   integrity sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==
 
 signature_pad@^5.0.2:
-  version "5.0.2"
-  resolved "https://registry.yarnpkg.com/signature_pad/-/signature_pad-5.0.2.tgz#190c4f8abf5d2fb3aff9c20ac3b997ac6f8e0e50"
-  integrity sha512-FSseAwRWznAQg90CnrTbC570u1QYi8gijZiyboc18SK2IUx7sYVZhNPLnJRCnwhpyOpgdqXf91XAHL4Yg41yCg==
+  version "5.0.3"
+  resolved "https://registry.yarnpkg.com/signature_pad/-/signature_pad-5.0.3.tgz#5b2fa6b7f752348b6ed8921e99c5423ca3813dc5"
+  integrity sha512-z0BScgoPuvKJqd/LZupJZPzt6MO3vXcCjltGyTszdF9Kz6fbWApYIK9n/KHEkjmhHAkyGj0xlnrsJqMmQeAehA==
 
 simple-git@^3.25.0:
   version "3.25.0"

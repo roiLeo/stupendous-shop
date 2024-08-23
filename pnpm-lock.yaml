@@ -43,7 +43,7 @@ dependencies:
     version: 2.2.2(vue@3.4.38)
   signature_pad:
     specifier: ^5.0.2
-    version: 5.0.2
+    version: 5.0.3
 
 devDependencies:
   '@nuxtjs/i18n':
@@ -7096,8 +7096,8 @@ packages:
     resolution: {integrity: sha512-bzyZ1e88w9O1iNJbKnOlvYTrWPDl46O1bG0D3XInv+9tkPrxrN8jUUTiFlDkkmKWgn1M6CfIA13SuGqOa9Korw==}
     engines: {node: '>=14'}
 
-  /signature_pad@5.0.2:
-    resolution: {integrity: sha512-FSseAwRWznAQg90CnrTbC570u1QYi8gijZiyboc18SK2IUx7sYVZhNPLnJRCnwhpyOpgdqXf91XAHL4Yg41yCg==}
+  /signature_pad@5.0.3:
+    resolution: {integrity: sha512-z0BScgoPuvKJqd/LZupJZPzt6MO3vXcCjltGyTszdF9Kz6fbWApYIK9n/KHEkjmhHAkyGj0xlnrsJqMmQeAehA==}
     dev: false
 
   /simple-git@3.25.0:
