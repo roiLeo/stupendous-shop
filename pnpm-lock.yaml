@@ -13,7 +13,7 @@ dependencies:
     version: 0.5.1
   '@metamask/providers':
     specifier: ^17.0.0
-    version: 17.1.2(webextension-polyfill@0.12.0)
+    version: 17.2.0(webextension-polyfill@0.12.0)
   '@metamask/types':
     specifier: ^1.1.0
     version: 1.1.0
@@ -1331,7 +1331,7 @@ packages:
     dependencies:
       '@metamask/rpc-errors': 6.3.1
       '@metamask/safe-event-emitter': 3.1.1
-      '@metamask/utils': 9.1.0
+      '@metamask/utils': 9.2.1
     transitivePeerDependencies:
       - supports-color
     dev: false
@@ -1342,7 +1342,7 @@ packages:
     dependencies:
       '@metamask/json-rpc-engine': 9.0.2
       '@metamask/safe-event-emitter': 3.1.1
-      '@metamask/utils': 9.1.0
+      '@metamask/utils': 9.2.1
       readable-stream: 3.6.2
     transitivePeerDependencies:
       - supports-color
@@ -1356,8 +1356,8 @@ packages:
       readable-stream: 3.6.2
     dev: false
 
-  /@metamask/providers@17.1.2(webextension-polyfill@0.12.0):
-    resolution: {integrity: sha512-hACtF02yaUYThvWrRtVU4JAc+ZLCZ4PJUYBw6dK9Rze50J7zCxtss2mB7H8w76iLx//b5hjgXx6y92gPVjuYWg==}
+  /@metamask/providers@17.2.0(webextension-polyfill@0.12.0):
+    resolution: {integrity: sha512-99EIsZo1vIuA7Wc9ruWOd9LGr0GCqEY9lR0/hcjasUZH31MGUe0H/0NdMcz2tRXhsYRvt6M+2lsM4dDG1+atRw==}
     engines: {node: ^18.18 || >=20}
     peerDependencies:
       webextension-polyfill: ^0.10.0 || ^0.11.0 || ^0.12.0
@@ -1367,7 +1367,7 @@ packages:
       '@metamask/object-multiplex': 2.0.0
       '@metamask/rpc-errors': 6.3.1
       '@metamask/safe-event-emitter': 3.1.1
-      '@metamask/utils': 9.1.0
+      '@metamask/utils': 9.2.1
       detect-browser: 5.3.0
       extension-port-stream: 4.2.0(webextension-polyfill@0.12.0)
       fast-deep-equal: 3.1.3
@@ -1382,7 +1382,7 @@ packages:
     resolution: {integrity: sha512-ugDY7cKjF4/yH5LtBaOIKHw/AiGGSAmzptAUEiAEGr/78LwuzcXAxmzEQfSfMIfI+f9Djr8cttq1pRJJKfTuCg==}
     engines: {node: '>=16.0.0'}
     dependencies:
-      '@metamask/utils': 9.1.0
+      '@metamask/utils': 9.2.1
       fast-safe-stringify: 2.1.1
     transitivePeerDependencies:
       - supports-color
@@ -1404,16 +1404,16 @@ packages:
     deprecated: '@metamask/types has been folded into @metamask/utils and is no longer being maintained. Please use @metamask/utils going forward.'
     dev: false
 
-  /@metamask/utils@9.1.0:
-    resolution: {integrity: sha512-g2REf+xSt0OZfMoNNdC4+/Yy8eP3KUqvIArel54XRFKPoXbHI6+YjFfrLtfykWBjffOp7DTfIc3Kvk5TLfuiyg==}
+  /@metamask/utils@9.2.1:
+    resolution: {integrity: sha512-/u663aUaB6+Xe75i3Mt/1cCljm41HDYIsna5oBrwGvgkY2zH7/9k9Zjd706cxoAbxN7QgLSVAReUiGnuxCuXrQ==}
     engines: {node: '>=16.0.0'}
     dependencies:
       '@ethereumjs/tx': 4.2.0
       '@metamask/superstruct': 3.1.0
-      '@noble/hashes': 1.4.0
-      '@scure/base': 1.1.7
+      '@noble/hashes': 1.5.0
+      '@scure/base': 1.1.8
       '@types/debug': 4.1.12
-      debug: 4.3.6
+      debug: 4.3.7
       pony-cause: 2.1.11
       semver: 7.6.3
       uuid: 9.0.1
@@ -2175,9 +2175,9 @@ packages:
     resolution: {integrity: sha512-bAe7a5bOPnuFVmpv7y4BBMRpNTnMmE0jtTqRUw/+D8ZlEHNVEJQGr4wu3QQCl7k1GnSV1wfv3mzIbYjErEBocg==}
     requiresBuild: true
     dependencies:
-      '@noble/hashes': 1.4.0
+      '@noble/hashes': 1.5.0
       '@polkadot-api/utils': 0.0.1
-      '@scure/base': 1.1.7
+      '@scure/base': 1.1.8
       scale-ts: 1.6.0
     dev: false
     optional: true
@@ -2591,14 +2591,14 @@ packages:
       '@polkadot/util': 12.6.2
     dependencies:
       '@noble/curves': 1.4.2
-      '@noble/hashes': 1.4.0
+      '@noble/hashes': 1.5.0
       '@polkadot/networks': 12.6.2
       '@polkadot/util': 12.6.2
       '@polkadot/wasm-crypto': 7.3.2(@polkadot/util@12.6.2)(@polkadot/x-randomvalues@12.6.2)
       '@polkadot/wasm-util': 7.3.2(@polkadot/util@12.6.2)
       '@polkadot/x-bigint': 12.6.2
       '@polkadot/x-randomvalues': 12.6.2(@polkadot/util@12.6.2)(@polkadot/wasm-util@7.3.2)
-      '@scure/base': 1.1.7
+      '@scure/base': 1.1.8
       tslib: 2.6.3
     dev: false
 
@@ -2609,14 +2609,14 @@ packages:
       '@polkadot/util': 12.6.2
     dependencies:
       '@noble/curves': 1.4.2
-      '@noble/hashes': 1.4.0
+      '@noble/hashes': 1.5.0
       '@polkadot/networks': 12.6.2
       '@polkadot/util': 13.0.2
       '@polkadot/wasm-crypto': 7.3.2(@polkadot/util@13.0.2)(@polkadot/x-randomvalues@12.6.2)
       '@polkadot/wasm-util': 7.3.2(@polkadot/util@13.0.2)
       '@polkadot/x-bigint': 12.6.2
       '@polkadot/x-randomvalues': 12.6.2(@polkadot/util@13.0.2)(@polkadot/wasm-util@7.3.2)
-      '@scure/base': 1.1.7
+      '@scure/base': 1.1.8
       tslib: 2.6.3
     dev: false
 
@@ -3266,10 +3266,6 @@ packages:
     requiresBuild: true
     optional: true
 
-  /@scure/base@1.1.7:
-    resolution: {integrity: sha512-PPNYBslrLNNUQ/Yad37MHYsNQtK67EhWb6WtSvNLLPo7SdVZgkUjD6Dg+5On7zNwmskf8OX7I7Nx5oN+MIWE0g==}
-    dev: false
-
   /@scure/base@1.1.8:
     resolution: {integrity: sha512-6CyAclxj3Nb0XT7GHK6K4zK6k2xJm6E4Ft0Ohjt4WgegiFUHEtFb2CGzmPmGBwoIhrLsqNLYfLr04Y1GePrzZg==}
     dev: false
@@ -3279,14 +3275,14 @@ packages:
     dependencies:
       '@noble/curves': 1.4.2
       '@noble/hashes': 1.4.0
-      '@scure/base': 1.1.7
+      '@scure/base': 1.1.8
     dev: false
 
   /@scure/bip39@1.3.0:
     resolution: {integrity: sha512-disdg7gHuTDZtY+ZdkmLpPCk7fxZSu3gBiEGuoC1XYxv9cGx3Z6cpTggCgW6odSOOIXCiDjuGejW+aJKCY/pIQ==}
     dependencies:
       '@noble/hashes': 1.4.0
-      '@scure/base': 1.1.7
+      '@scure/base': 1.1.8
     dev: false
 
   /@sindresorhus/merge-streams@2.3.0:
@@ -4641,18 +4637,6 @@ packages:
         optional: true
     dependencies:
       ms: 2.1.3
-    dev: false
-
-  /debug@4.3.6:
-    resolution: {integrity: sha512-O/09Bd4Z1fBrU4VzkhFqVgpPzaGbw6Sm9FEkBT1A/YBXQFGuuSxa1dN2nxgxS34JmKXqYx8CZAwEVoJFImUXIg==}
-    engines: {node: '>=6.0'}
-    peerDependencies:
-      supports-color: '*'
-    peerDependenciesMeta:
-      supports-color:
-        optional: true
-    dependencies:
-      ms: 2.1.2
     dev: false
 
   /debug@4.3.7:
@@ -6151,10 +6135,6 @@ packages:
   /ms@2.0.0:
     resolution: {integrity: sha512-Tpp60P6IUJDTuOq/5Z8cdskzJujfwqfOTkrwIwj7IRISpnkJnT6SyJ4PCPnGMoFjC9ddhal5KVIYtAt97ix05A==}
     dev: true
-
-  /ms@2.1.2:
-    resolution: {integrity: sha512-sGkPx+VjMtmA6MX27oA4FBFELFCZZ4S4XqeGOXCv68tT+jb3vk/RyaKWP0PTKyWtmLSM0b+adUTEvbs1PEaH2w==}
-    dev: false
 
   /ms@2.1.3:
     resolution: {integrity: sha512-6FlzubTLZG3J2a/NVCAleEhjzq5oxgHyaCU9yYXvcLsvoVaHJq/s5xXI6/XXP6tz7R9xAOtHnSO/tXtF3WRTlA==}
