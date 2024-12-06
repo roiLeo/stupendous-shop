@@ -1,6 +1,7 @@
 import { MetaMaskInpageProvider } from '@metamask/providers'
-import type { Maybe } from '@metamask/types'
-import { EvmWallet } from '@/utils/wallets'
+import type { EvmWallet } from '@/utils/wallets'
+
+type Maybe<T> = Partial<T> | null | undefined;
 
 export class BaseEvmWallet implements EvmWallet {
   img = ''
