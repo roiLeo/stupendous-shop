@@ -36,6 +36,12 @@ export default defineNuxtConfig({
     autoImports: ['defineStore', ['defineStore', 'definePiniaStore']],
   },
 
+  nitro: {
+    externals: {
+      traceInclude: []
+    }
+  },
+
   runtimeConfig: {
     public: {
       CHAIN: process.env.CHAIN,

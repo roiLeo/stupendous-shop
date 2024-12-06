@@ -1,5 +1,5 @@
 import { MetaMaskInpageProvider } from '@metamask/providers'
-import { EvmWallet } from '@/utils/wallets'
+import type { EvmWallet } from '@/utils/wallets'
 
 type Maybe<T> = Partial<T> | null | undefined;
 
