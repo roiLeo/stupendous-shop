@@ -17,8 +17,8 @@
 Make sure to install the dependencies:
 
 ```bash
-# yarn
-yarn install
+# pnpm
+pnpm install
 ```
 
 Add your environment variables to a `.env` file like [`.env.example`](./.env.example) file:
@@ -33,7 +33,7 @@ COLLECTION_ID=""
 Start the development server on http://localhost:3000
 
 ```bash
-yarn dev
+pnpm dev
 ```
 
 ## Production
@@ -41,13 +41,13 @@ yarn dev
 Build the application for production:
 
 ```bash
-yarn build
+pnpm build
 ```
 
 Locally preview production build:
 
 ```bash
-yarn preview
+pnpm preview
 ```
 
 ## Deploy to Netlify
