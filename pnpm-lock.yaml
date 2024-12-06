@@ -17,9 +17,6 @@ importers:
       '@metamask/providers':
         specifier: ^18.2.0
         version: 18.2.0(webextension-polyfill@0.12.0)
-      '@metamask/types':
-        specifier: ^1.1.0
-        version: 1.1.0
       '@nuxt/ui':
         specifier: ^2.19.2
         version: 2.19.2(change-case@5.4.4)(magicast@0.3.5)(rollup@4.28.1)(vite@5.4.11(@types/node@22.10.1)(terser@5.37.0))(vue@3.5.13(typescript@5.7.2))
@@ -51,6 +48,9 @@ importers:
       '@nuxtjs/i18n':
         specifier: ^9.1.1
         version: 9.1.1(@vue/compiler-dom@3.5.13)(eslint@9.16.0(jiti@2.4.1))(magicast@0.3.5)(rollup@4.28.1)(typescript@5.7.2)(vue@3.5.13(typescript@5.7.2))
+      '@vue/compiler-dom':
+        specifier: ^3.5.13
+        version: 3.5.13
       nuxt:
         specifier: ^3.14.1592
         version: 3.14.1592(@parcel/watcher@2.5.0)(@types/node@22.10.1)(eslint@9.16.0(jiti@2.4.1))(ioredis@5.4.1)(magicast@0.3.5)(optionator@0.9.4)(rollup@4.28.1)(terser@5.37.0)(typescript@5.7.2)(vite@5.4.11(@types/node@22.10.1)(terser@5.37.0))
@@ -763,11 +763,6 @@ packages:
   '@metamask/superstruct@3.1.0':
     resolution: {integrity: sha512-N08M56HdOgBfRKkrgCMZvQppkZGcArEop3kixNEtVbJKm6P9Cfg0YkI6X0s1g78sNrj2fWUwvJADdZuzJgFttA==}
     engines: {node: '>=16.0.0'}
-
-  '@metamask/types@1.1.0':
-    resolution: {integrity: sha512-EEV/GjlYkOSfSPnYXfOosxa3TqYtIW3fhg6jdw+cok/OhMgNn4wCfbENFqjytrHMU2f7ZKtBAvtiP5V8H44sSw==}
-    engines: {node: '>=12.0.0'}
-    deprecated: '@metamask/types has been folded into @metamask/utils and is no longer being maintained. Please use @metamask/utils going forward.'
 
   '@metamask/utils@10.0.1':
     resolution: {integrity: sha512-zHgAitJtRwviVVFnRUA2PLRMaAwatr3jiHgiH7mPicJaeSK4ma01aGR4fHy0iy5tlVo1ZiioTmJ1Hbp8FZ6pSg==}
@@ -5059,8 +5054,6 @@ snapshots:
   '@metamask/safe-event-emitter@3.1.2': {}
 
   '@metamask/superstruct@3.1.0': {}
-
-  '@metamask/types@1.1.0': {}
 
   '@metamask/utils@10.0.1':
     dependencies:
