@@ -10,22 +10,22 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^8.0.0",
-    "nuxt": "^3.8"
+    "@nuxtjs/i18n": "^9.1.1",
+    "nuxt": "^3.14.1592"
   },
   "dependencies": {
-    "@kodadot1/minipfs": "^0.4.3-rc.1",
-    "@kodadot1/uniquery": "^0.5.1-rc.0",
-    "@metamask/providers": "^17.0.0",
+    "@kodadot1/minipfs": "0.5.0-rc.0",
+    "@kodadot1/uniquery": "0.7.2-rc.0",
+    "@metamask/providers": "^18.2.0",
     "@metamask/types": "^1.1.0",
-    "@nuxt/ui": "^2.7.0",
-    "@pinia/nuxt": "^0.5.0",
-    "@polkadot/api": "^13.0.0",
-    "@polkadot/extension-dapp": "^0.48.0",
-    "@polkadot/keyring": "^13.0.0",
-    "@polkadot/ui-shared": "^3.1.4",
-    "@polkadot/util": "^13.0.0",
-    "pinia": "^2.0.33",
-    "signature_pad": "^5.0.2"
+    "@nuxt/ui": "^2.19.2",
+    "@pinia/nuxt": "^0.9.0",
+    "@polkadot/api": "^15.0.1",
+    "@polkadot/extension-dapp": "^0.57.1",
+    "@polkadot/keyring": "^13.2.3",
+    "@polkadot/ui-shared": "^3.11.3",
+    "@polkadot/util": "^13.2.3",
+    "pinia": "^2.3.0",
+    "signature_pad": "^5.0.4"
   }
 }
