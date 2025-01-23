@@ -31,6 +31,17 @@ export default defineNuxtConfig({
     strategy: 'no_prefix',
   },
 
+  build: {
+    transpile: [
+      '@metamask/providers',
+      '@polkadot/api',
+      '@polkadot/extension-dapp',
+      '@polkadot/keyring',
+      '@polkadot/ui-shared',
+      '@polkadot/util',
+    ],
+  },
+
   runtimeConfig: {
     public: {
       CHAIN: process.env.CHAIN,
@@ -39,4 +50,4 @@ export default defineNuxtConfig({
   },
 
   compatibilityDate: '2025-01-23',
-})
+});
