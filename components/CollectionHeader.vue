@@ -5,7 +5,7 @@
         <div class="relative h-[108px] w-[108px]">
           <div class="aspect-square overflow-hidden rounded-[18%]">
             <div class="relative h-full w-full">
-              <img class="m-0 p-0" :src="image" loading="lazy">
+              <img class="m-0 p-0" :src="image">
             </div>
           </div>
         </div>

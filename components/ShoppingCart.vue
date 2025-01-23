@@ -29,7 +29,7 @@
 
       <ul class="flex flex-col flex-1 p-8 gap-4 overflow-y-scroll">
         <li class="flex gap-4 items-center" v-for="item in cart" :key="item.id">
-          <img class="rounded-lg h-16 w-16" :src="useSanitizeUri(item.meta?.image)" :alt="item.name" :title="item.name" loading="lazy" width="64" height="64">
+          <img class="rounded-lg h-16 w-16" :src="useSanitizeUri(item.meta?.image)" :alt="item.name" :title="item.name" width="64" height="64">
           <div class="flex-1">
             <div class="leading-tight">{{ item.name }}</div>
             <div class="flex mt-1 text-xs"><span class="font-semibold">{{ formatPrice(item.price) }}</span></div>

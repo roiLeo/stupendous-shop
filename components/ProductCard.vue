@@ -7,7 +7,6 @@
           :alt="item.name"
           :width="300"
           :height="300"
-          loading="lazy"
         />
       </nuxt-link>
 
