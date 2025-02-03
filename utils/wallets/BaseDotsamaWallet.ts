@@ -1,12 +1,4 @@
 import type { SubscriptionFn, Wallet } from '@/utils/wallets'
-import type { Signer as InjectedSigner } from '@polkadot/api/types'
-import type {
-	InjectedAccount,
-	InjectedExtension,
-	InjectedMetadata,
-	InjectedProvider,
-	InjectedWindow,
-} from '@polkadot/extension-inject/types'
 import { formatAddress } from '@/composables/utils'
 
 const DAPP_NAME = 'STUPENDOUS-Shop';
@@ -25,10 +17,10 @@ export class BaseDotsamaWallet implements Wallet {
 	isBrowserExtension = false
 	isPopular = false
 
-	_extension: InjectedExtension | undefined
-	_signer: InjectedSigner | undefined
-	_metadata: InjectedMetadata | undefined
-	_provider: InjectedProvider | undefined
+	_extension: any | undefined
+	_signer: any | undefined
+	_metadata: any | undefined
+	_provider: any | undefined
 
 	// API docs: https://polkadot.js.org/docs/extension/
 	get extension() {
@@ -49,7 +41,7 @@ export class BaseDotsamaWallet implements Wallet {
 	}
 
 	get installed() {
-		const injectedWindow = window as Window & InjectedWindow
+		const injectedWindow = window as Window & any
 		const injectedExtension =
 			injectedWindow?.injectedWeb3?.[this.extensionName]
 
@@ -57,7 +49,7 @@ export class BaseDotsamaWallet implements Wallet {
 	}
 
 	get rawExtension() {
-		const injectedWindow = window as Window & InjectedWindow
+		const injectedWindow = window as Window & any
 		const injectedExtension =
 			injectedWindow?.injectedWeb3?.[this.extensionName]
 		return injectedExtension
@@ -75,7 +67,7 @@ export class BaseDotsamaWallet implements Wallet {
 				return
 			}
 
-			const extension: InjectedExtension = {
+			const extension: any = {
 				...rawExtension,
 				// Manually add `InjectedExtensionInfo` so as to have a consistent response.
 				name: this.extensionName,
@@ -102,7 +94,7 @@ export class BaseDotsamaWallet implements Wallet {
 		}
 
 		const unsubscribe = this._extension.accounts.subscribe(
-			(accounts: InjectedAccount[]) => {
+			(accounts: any[]) => {
 				const accountsWithWallet = accounts.map((account) => {
 					console.log(account)
 					// encode/decode Address not working
