@@ -25,7 +25,7 @@
         >
           <UButton
             variant="ghost"
-            color="gray"
+            color="neutral"
             :label="$t('action.undo')"
             icon="i-heroicons-arrow-uturn-left"
             @click="undo"
@@ -37,7 +37,7 @@
         >
           <UButton
             variant="ghost"
-            color="gray"
+            color="neutral"
             icon="i-heroicons-x-mark"
             :label="$t('action.clear')"
             @click="clear"

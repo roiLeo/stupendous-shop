@@ -1,9 +1,9 @@
 <template>
-  <a v-if="!isOpen" class="cursor-pointer flex mt-4 text-sm text-gray-400 gap-2 items-center" @click="showShare">
+  <a v-if="!isOpen" class="cursor-pointer flex mt-4 text-sm text-neutral-400 gap-2 items-center" @click="showShare">
     <UIcon name="i-heroicons-share" />
     <span>Share</span>
   </a>
-  <div v-else class="cursor-pointer flex mt-4 text-sm text-gray-400 gap-2 items-center">
+  <div v-else class="cursor-pointer flex mt-4 text-sm text-neutral-400 gap-2 items-center">
     <!-- Twitter -->
     <a :href="twitterUrl" target="_blank">
       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">

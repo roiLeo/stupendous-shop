@@ -1,6 +1,5 @@
-import { MetaMaskInpageProvider } from '@metamask/providers'
 import type { Maybe } from '@metamask/types'
-import { EvmWallet } from '@/utils/wallets'
+import type { EvmWallet } from '@/utils/wallets'
 
 export class BaseEvmWallet implements EvmWallet {
   img = ''
@@ -17,9 +16,9 @@ export class BaseEvmWallet implements EvmWallet {
   initEvent?: string
   _isReady = false
   _handledReady = false
-  isReady: Promise<MetaMaskInpageProvider | undefined>
+  isReady: Promise<any | undefined>
 
-  _extension: MetaMaskInpageProvider | undefined
+  _extension: any | undefined
 
   constructor() {
     this.isReady = this.waitReady().then((extension) => {
@@ -33,12 +32,12 @@ export class BaseEvmWallet implements EvmWallet {
   private lookupProvider() {
     return ((window && window[this.extensionName]) ||
       (window?.ethereum &&
-        window?.ethereum[this.isSetGlobalString])) as MetaMaskInpageProvider
+        window?.ethereum[this.isSetGlobalString])) as any
   }
 
   private async waitReady(
     timeout = 3000
-  ): Promise<MetaMaskInpageProvider | undefined> {
+  ): Promise<any | undefined> {
     if (this._isReady) {
       return Promise.resolve(this.extension)
     }

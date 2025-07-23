@@ -1,20 +1,20 @@
 <template>
-	<!-- Main modal -->
-  <UModal>
-    <UCard>
-      <template #header>
-        <div class="flex items-center justify-between">
-          <h3 class="text-base font-semibold leading-6 text-gray-900 dark:text-white">
-            {{ $t('action.login') }}
-          </h3>
-          <UButton color="gray" variant="ghost" icon="i-heroicons-x-mark-20-solid" class="-my-1" @click="$emit('close-modal')" />
-        </div>
-      </template>
+  <UModal :title="$t('action.login')">
+    <UButton
+      size="lg"
+      aria-label="Connect your Wallet"
+      icon="i-heroicons-wallet"
+      class="rounded-full"
+      variant="outline"
+      @click="toggleWalletModal"
+    >
+      {{ $t('action.login') }}
+    </UButton>
 
-      <!-- Modal body -->
+    <template #body>
       <div v-show="!hasSelectedWalletProvider">
-        <p class="text-sm text-center font-normal text-gray-500">
-          Connect with one of our available wallet providers or
+        <p class="text-sm text-center font-normal text-neutral-500">
+          Connect with one of our available wallet providers or<br>
           create a new one.
         </p>
 
@@ -23,7 +23,7 @@
             <a
               href="#"
               @click="setWallet(wallet)"
-              class="flex items-center p-3 text-base font-bold text-gray-900 bg-gray-50 rounded-lg hover:bg-gray-100 group hover:shadow"
+              class="flex items-center p-3 text-base font-bold text-neutral-900 bg-neutral-50 rounded-lg hover:bg-neutral-100 group hover:shadow"
             >
               <img
                 class="w-4"
@@ -36,7 +36,7 @@
               </span>
               <span
                 v-show="wallet.isPopular"
-                class="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-gray-500 bg-gray-200 rounded"
+                class="inline-flex items-center justify-center px-2 py-0.5 ml-3 text-xs font-medium text-neutral-500 bg-neutral-200 rounded"
               >
                 Popular
               </span>
@@ -48,7 +48,7 @@
 
       <div v-show="hasSelectedWalletProvider && hasWalletProviderExtension">
         <p
-          class="text-sm font-normal text-gray-500"
+          class="text-sm font-normal text-neutral-500"
           v-if="selectedWalletProvider"
         >
           Choose your
@@ -63,7 +63,7 @@
 
         <!-- Wallet accounts -->
         <select
-          class="my-4 bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2 form-select appearance-none block"
+          class="my-4 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2 form-select appearance-none block"
           v-model="selectedAccount"
           @change="setAccount(selectedAccount)"
         >
@@ -78,19 +78,19 @@
           </option>
         </select>
       </div>
+    </template>
 
-      <template #footer>
-        <div>
-          <a
-            href="#"
-            class="inline-flex items-center text-xs font-normal text-gray-500 hover:underline"
-          >
-            <UIcon name="i-heroicons-question-mark-circle" size="xs" class="mr-2" />
-            Why do I need to connect with my wallet?</a
-          >
-        </div>
-      </template>
-    </UCard>
+    <template #footer>
+      <div class="w-full text-center">
+        <a
+          href="#"
+          class="inline-flex items-center text-xs font-normal text-neutral-500 hover:underline"
+        >
+          <UIcon name="i-heroicons-question-mark-circle" size="xs" class="mr-2" />
+          Why do I need to connect with my wallet?</a
+        >
+      </div>
+    </template>
   </UModal>
 </template>
 
@@ -104,6 +104,7 @@ const {
   hasEnabledWalletProvider,
   hasSelectedWalletProvider,
   hasWalletProviderExtension,
+  toggleWalletModal,
   walletAccounts
 } = useConnectWallet()
 

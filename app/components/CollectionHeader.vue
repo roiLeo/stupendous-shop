@@ -28,7 +28,7 @@
         <div class="max-w-[600px] whitespace-pre-line leading-relaxed text-neutral-500">
           {{ metaDescription }}
           <UButton
-            v-show="hasMaxDescriptionLength"
+            v-if="hasMaxDescriptionLength"
             size="sm"
             color="primary"
             variant="link"

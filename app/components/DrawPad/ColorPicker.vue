@@ -5,10 +5,10 @@
   >
     <template #default="{ open }">
       <UButton
-        color="gray"
+        color="neutral"
         variant="ghost"
         square
-        :class="[open && 'bg-gray-50 dark:bg-gray-800']"
+        :class="[open && 'bg-neutral-50 dark:bg-neutral-800']"
         aria-label="Color picker"
         :icon="icon"
       >
@@ -25,21 +25,21 @@
           <div
             v-for="color in colors"
             :key="color"
-            class="w-5 h-5 rounded-full border-2 hover:border-gray-200 cursor-pointer"
-            :class="color === current ? 'border-gray-200' : 'border-white'"
+            class="w-5 h-5 rounded-full border-2 hover:border-neutral-200 cursor-pointer"
+            :class="color === current ? 'border-neutral-200' : 'border-white'"
             :style="{ backgroundColor: color }"
             @click="setColor(color)"
           />
         </div>
 
-        <hr class="border-gray-200 dark:border-gray-800 my-2">
+        <hr class="border-neutral-200 dark:border-neutral-800 my-2">
 
         <div class="grid grid-cols-6 gap-px">
           <div
             v-for="color in grayColors"
             :key="color"
-            class="w-5 h-5 rounded-full border-2 hover:border-gray-200 cursor-pointer"
-            :class="color === current ? 'border-gray-200' : 'border-white'"
+            class="w-5 h-5 rounded-full border-2 hover:border-neutral-200 cursor-pointer"
+            :class="color === current ? 'border-neutral-200' : 'border-white'"
             :style="{ backgroundColor: color }"
             @click="setColor(color)"
           />

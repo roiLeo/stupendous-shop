@@ -1,11 +1,11 @@
 <template>
-  <header class="bg-background/75 backdrop-blur border-b border-gray-200 dark:border-gray-800 -mb-px sticky top-0 z-50">
+  <header class="bg-background/75 backdrop-blur border-b border-neutral-200 dark:border-neutral-800 -mb-px sticky top-0 z-50">
     <div class="mx-auto flex items-center justify-between gap-3 h-16 max-w-[1536px] w-full">
       <UButton
         square
         icon="i-heroicons-home"
         size="lg"
-        color="gray"
+        color="neutral"
         variant="ghost"
         aria-label="Heart"
         to="/"
@@ -20,7 +20,7 @@
             square
             size="lg"
             icon="i-heroicons-heart"
-            color="gray"
+            color="neutral"
             variant="ghost"
             aria-label="Heart"
             to="/wishlist"

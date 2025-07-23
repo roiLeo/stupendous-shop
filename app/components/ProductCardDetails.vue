@@ -1,6 +1,6 @@
 <template>
 	<div class="my-4 lg:grid lg:grid-cols-2 lg:gap-x-16">
-		<div class="w-full rounded-xl border-2 border-gray-200 dark:border-gray-700 lg:mt-0 lg:col-start-1 lg:row-span-2 lg:self-start">
+		<div class="w-full rounded-xl border-2 border-neutral-200 dark:border-neutral-700 lg:mt-0 lg:col-start-1 lg:row-span-2 lg:self-start">
 			<div class="rounded-lg overflow-hidden">
 				<img class="w-full h-full object-center object-contain"
           :src="image"
@@ -14,16 +14,16 @@
 			<div class="flex flex-col gap-4 py-4 lg:pt-0">
 				<div class="w-full flex items-center justify-between gap-4">
 					<hgroup>
-						<h1 class="text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white tracking-tight">
+						<h1 class="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white tracking-tight">
 							{{ item.name }}
 						</h1>
-            <div class="mt-2 text-gray-400">
+            <div class="mt-2 text-neutral-400">
               <UTooltip :text="new Date(item.createdAt).toLocaleDateString()">
                 <time>Minted {{ timeAgo(item.createdAt) }} ago</time>
               </UTooltip>
             </div>
 					</hgroup>
-          <UBadge color="gray" size="lg" variant="solid" v-if="isAvailable">
+          <UBadge color="neutral" size="lg" variant="solid" v-if="isAvailable">
             {{ formatPrice(item.price) }}
           </UBadge>
 				</div>
@@ -31,7 +31,7 @@
 
       <div class="my-8 text-sm grid gap-2">
         <div class="flex gap-2 items-center" v-if="item.currentOwner">
-          <span class="text-gray-400">{{ $t('text.owner') }}: </span>
+          <span class="text-neutral-400">{{ $t('text.owner') }} </span>
           <span>
             <a class="text-blue-500 hover:underline"
                 target="_blank"
@@ -41,21 +41,21 @@
           </span>
         </div>
         <div class="flex gap-2 items-center">
-          <span class="text-gray-400">{{ $t('text.availability') }}: </span>
+          <span class="text-neutral-400">{{ $t('text.availability') }} </span>
           <span class="text-red-600" v-if="!isAvailable">{{ $t('text.unavailable') }}</span>
           <span class="text-green-600" v-else>{{ $t('text.available') }}</span>
         </div>
         <div class="flex gap-2 items-center">
-          <span class="text-gray-400">ID: </span>
+          <span class="text-neutral-400">ID </span>
           <span>{{ item.id }}</span>
         </div>
       </div>
 
-      <div class="mt-4 text-lg text-gray-500 dark:text-gray-400 mb-8 space-y-6 font-light prose">
+      <div class="mt-4 text-lg text-neutral-500 dark:text-neutral-400 mb-8 space-y-6 font-light prose">
         {{ description }}
       </div>
 
-      <hr class="border-1 border-gray-200 dark:border-gray-700">
+      <hr class="border-1 border-neutral-200 dark:border-neutral-700">
 
       <UButton
         block
@@ -68,7 +68,7 @@
         {{ $t('action.add_to_cart') }}
       </UButton>
 
-      <hr class="border-1 border-gray-200 dark:border-gray-700">
+      <hr class="border-1 border-neutral-200 dark:border-neutral-700">
 
       <div class="flex flex-wrap gap-4">
         <ShareButtons :product="item" />
