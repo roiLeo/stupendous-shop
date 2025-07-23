@@ -1,4 +1,4 @@
-import { MetaMaskInpageProvider } from '@metamask/providers'
+// import { MetaMaskInpageProvider } from '@metamask/providers'
 import { PolkadotjsWallet } from '~/utils/wallets/PolkadotjsWallet'
 import { MetamaskWallet } from '~/utils/wallets/MetamaskWallet'
 import { LedgerWallet } from '~/utils/wallets/LedgerWallet'
@@ -118,8 +118,8 @@ export interface EvmWalletInfo extends WalletData {
 
 export interface EvmWallet extends EvmWalletInfo {
   installed: boolean
-  extension: MetaMaskInpageProvider | undefined
-  isReady: Promise<MetaMaskInpageProvider | undefined>
+  extension: any | undefined
+  isReady: Promise<any | undefined>
 
   request<T>(args: any): Promise<any>
   enable(): Promise<boolean>

@@ -10,20 +10,21 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^9.1.5",
-    "nuxt": "^3.15.4",
-    "vue": "latest",
-    "vue-router": "latest"
+    "@nuxtjs/i18n": "^10.0.2",
+    "nuxt": "^4.0.1",
+    "vue": "^3.5.18",
+    "vue-router": "^4.5.1"
   },
   "dependencies": {
     "@kodadot1/minipfs": "0.5.1-rc.1",
-    "@kodadot1/uniquery": "0.7.2-rc.0",
-    "@nuxt/ui": "^2.21.0",
-    "@pinia/nuxt": "^0.9.0",
-    "@polkadot/ui-shared": "^3.12.1",
-    "@polkadot/util": "^13.3.1",
-    "@polkadot/util-crypto": "^13.3.1",
-    "pinia": "^2.3.1",
-    "signature_pad": "^5.0.4"
-  }
+    "@kodadot1/uniquery": "0.7.2-rc.1",
+    "@nuxt/ui": "^3.2.0",
+    "@pinia/nuxt": "^0.11.2",
+    "@polkadot/ui-shared": "^3.15.2",
+    "@polkadot/util": "^13.5.3",
+    "@polkadot/util-crypto": "^13.5.3",
+    "pinia": "^3.0.3",
+    "signature_pad": "^5.0.10"
+  },
+  "packageManager": "pnpm@9.15.7+sha512.ed98f9c748442673c46964b70345bd2282c9b305e8eae539b34ab31d6ef24ef8dd59d8b55f27466f705500b009d9c113471cf87e544f3d5036b297330c26e996"
 }

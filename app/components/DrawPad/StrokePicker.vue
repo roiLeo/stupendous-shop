@@ -5,10 +5,10 @@
   >
     <template #default="{ open }">
       <UButton
-        color="gray"
+        color="neutral"
         variant="ghost"
         square
-        :class="[open && 'bg-gray-50 dark:bg-gray-800']"
+        :class="[open && 'bg-neutral-50 dark:bg-neutral-800']"
         aria-label="Stroke picker"
         icon="i-heroicons-adjustments-horizontal"
       >
@@ -22,8 +22,8 @@
           <div
             v-for="size in sizes"
             :key="size"
-            class="w-full rounded-full border-2 hover:border-gray-400 cursor-pointer"
-            :class="size === current ? 'border-gray-400' : 'border-white'"
+            class="w-full rounded-full border-2 hover:border-neutral-400 cursor-pointer"
+            :class="size === current ? 'border-neutral-400' : 'border-white'"
             :style="{ backgroundColor: color, height: `${size * ratio + 4}px` }"
             @click="setSize(size)"
           />

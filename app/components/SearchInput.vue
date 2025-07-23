@@ -3,7 +3,7 @@
     <template #trailing>
       <UButton
         v-show="q !== ''"
-        color="gray"
+        color="neutral"
         variant="link"
         icon="i-heroicons-x-mark-20-solid"
         :padded="false"

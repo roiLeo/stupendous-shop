@@ -11,9 +11,7 @@ export default defineNuxtConfig({
 
   modules: ['@nuxt/ui', '@nuxtjs/i18n', '@pinia/nuxt'],
 
-  ui: {
-    global: true,
-  },
+  css: ['~/assets/css/main.css'],
 
   colorMode: {
     preference: 'dark',

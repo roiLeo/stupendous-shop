@@ -1,5 +1,5 @@
 <template>
-	<div class="border border-gray-200 dark:border-gray-700 rounded-md hover:shadow-lg max-w-[300px]">
+	<div class="border border-neutral-200 dark:border-neutral-700 rounded-md hover:shadow-lg max-w-[300px]">
 		<div class="relative">
       <nuxt-link :to="`/products/${item.id}`">
 				<img class="block object-cover h-auto rounded-md aspect-square"
@@ -12,10 +12,10 @@
 
       <WishlistButton
         :product="item"
-        class="absolute bottom-0 right-0 mr-2 mb-2 border border-gray-200 dark:border-gray-700 !rounded-full"
+        class="absolute bottom-0 right-0 mr-2 mb-2 border border-neutral-200 dark:border-neutral-700 !rounded-full"
       />
 		</div>
-		<div class="p-4 border-y border-gray-200 dark:border-gray-700">
+		<div class="p-4 border-y border-neutral-200 dark:border-neutral-700">
       <nuxt-link :to="`/products/${item.id}`" class="max-w-full self-start text-sm hover:underline">
         {{ item.name }} #{{ item.sn }}
       </nuxt-link>
