@@ -84,7 +84,7 @@ const props = defineProps(['item'])
 const cartStore = useCartStore()
 const config = useRuntimeConfig()
 
-const image = useSanitizeUri(props.item.meta?.image)
+const image = await useSanitizeUri(props.item.meta?.image)
 const description = ref(props.item.meta?.description)
 const isAvailable = ref(props.item.price !== '0')
 

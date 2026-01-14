@@ -48,7 +48,7 @@
 
 <script lang="ts" setup>
 const props = defineProps(['item'])
-const image = useSanitizeUri(props.item.meta?.image)
+const image = await useSanitizeUri(props.item.meta?.image)
 const price = ref(props.item.price)
 const description = ref(props.item.meta?.description)
 const cartStore = useCartStore()
