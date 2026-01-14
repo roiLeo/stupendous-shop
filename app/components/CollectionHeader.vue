@@ -78,7 +78,7 @@ await useAsyncData('collection', () => productsStore.fetchCollection())
 
 const collection = computed(() => productsStore.getCollection)
 const meta = ref(collection.value.meta)
-const image = useSanitizeUri(meta.value.image)
+const image = await useSanitizeUri(meta.value.image)
 
 const toggleShowMore = ref(false)
 const hasMaxDescriptionLength = ref((meta.value.description.length || 0) > MAX_CHARS)
