@@ -1,7 +1,7 @@
 <template>
-  <div class="flex flex-col justify-center mx-auto h-full max-w-[1536px] w-full mt-8 pb-24">
+  <div class="flex flex-col justify-center mx-auto h-full max-w-384 w-full mt-8 pb-24">
     <h2 class="text-center pb-4"> {{ $t('messages.mint_draw_title') }} </h2>
-    <div class="max-w-[600px] mx-auto">
+    <div class="max-w-150 mx-auto">
       <DrawPad
         :save-label="$t('action.create_nft')"
         :saving="saving"

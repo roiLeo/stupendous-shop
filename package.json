@@ -10,14 +10,14 @@
     "postinstall": "nuxt prepare"
   },
   "devDependencies": {
-    "@nuxtjs/i18n": "^10.2.1",
-    "nuxt": "^4.2.2",
-    "vue": "^3.5.26",
-    "vue-router": "^4.6.4"
+    "@nuxtjs/i18n": "^10.2.3",
+    "nuxt": "^4.3.1",
+    "vue": "^3.5.28",
+    "vue-router": "^5.0.2"
   },
   "dependencies": {
     "@kodadot1/uniquery": "0.7.2-rc.1",
-    "@nuxt/ui": "^4.3.0",
+    "@nuxt/ui": "^4.4.0",
     "@pinia/nuxt": "^0.11.3",
     "@polkadot/ui-shared": "^3.16.4",
     "@polkadot/util": "^14.0.1",

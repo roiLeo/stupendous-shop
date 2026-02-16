@@ -2,24 +2,24 @@
   <div class="flex flex-col">
     <div class="flex flex-col gap-4 my-6">
       <div class="flex flex-col gap-4">
-        <div class="relative h-[108px] w-[108px]">
+        <div class="relative h-27 w-27">
           <div class="aspect-square overflow-hidden rounded-[18%]">
             <div class="relative h-full w-full">
-              <img class="m-0 p-0" :src="image">
+              <img v-if="image" class="m-0 p-0" :src="image">
             </div>
           </div>
         </div>
         <div class="flex flex-wrap items-center justify-between gap-4 md:flex-nowrap md:justify-start">
-          <h2 class="heading mb-2 max-w-[400px] text-4xl font-normal md:max-w-none">
+          <h2 class="heading mb-2 max-w-100 text-4xl font-normal md:max-w-none">
             {{ collection.name }}
-            <UIcon name="i-heroicons-check-badge" class="flex-shrink-0 h-4 w-4 text-blue-500 ms-auto" />
+            <UIcon name="i-heroicons-check-badge" class="shrink-0 h-4 w-4 text-blue-500 ms-auto" />
           </h2>
         </div>
       </div>
       <div class="mb-3 flex max-w-[640px] flex-wrap items-center gap-1 self-start leading-normal">
         <div class="text-neutral-600 dark:text-neutral-400">{{ $t('text.created_by') }}</div>
         <a class="flex font-medium"
-           :href="`https://beta.kodadot.xyz/${config.public.CHAIN}/u/${collection.issuer}`">
+           :href="`https://beta.chaotic.art/${config.public.CHAIN}/u/${collection.issuer}`">
           <Polkadot size="24" theme="polkadot" :address="collection.issuer" class="mx-2" />
           <div class="hover:underline focus:underline">{{ shortAddress(collection.issuer) }}</div>
         </a>
@@ -74,7 +74,7 @@ const MAX_CHARS = 240
 const productsStore = useProductsStore()
 const config = useRuntimeConfig()
 
-await useAsyncData('collection', () => productsStore.fetchCollection())
+await callOnce('collection', () => productsStore.fetchCollection())
 
 const collection = computed(() => productsStore.getCollection)
 const meta = ref(collection.value.meta)

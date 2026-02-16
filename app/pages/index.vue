@@ -9,7 +9,7 @@
 		</form> -->
 
 		<!-- {{ items }} -->
-		<div class="grid lg:grid-cols-5 md:grid-cols-4 xs:grid-cols-2 gap-4 py-4">
+		<div class="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-4 py-4">
 			<ProductCard v-for="item in items" :key="item.id" :item="item" />
 		</div>
 	</div>
@@ -21,7 +21,7 @@ import { useProductsStore } from '@/stores/products'
 const productsStore = useProductsStore()
 const inputCollectionId = ref('') // 945672150
 
-await useAsyncData('products', () => productsStore.fetchItems())
+await callOnce('products', () => productsStore.fetchItems())
 
 const items = computed(() => productsStore.getItems)
 

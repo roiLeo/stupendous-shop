@@ -1,5 +1,5 @@
 <template>
-	<div class="flex flex-col justify-center mx-auto h-full max-w-[1536px] w-full p-4">
+	<div class="flex flex-col justify-center mx-auto h-full max-w-384 w-full p-4">
 		<!-- BREADCRUMB HERE -->
 		<div>
       <UButton

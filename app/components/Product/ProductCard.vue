@@ -2,7 +2,7 @@
 	<div class="border border-neutral-200 dark:border-neutral-700 rounded-md hover:shadow-lg max-w-[300px]">
 		<div class="relative">
       <nuxt-link :to="`/products/${item.id}`">
-				<img class="block object-cover h-auto rounded-md aspect-square"
+				<img v-if="image" class="block object-cover h-auto rounded-md aspect-square"
           :src="image"
           :alt="item.name"
           :width="300"

@@ -20,7 +20,7 @@
 
       <UIcon
         :name="item.icon"
-        class="flex-shrink-0 h-4 w-4 text-neutral-400 dark:text-neutral-500 ms-auto"
+        class="shrink-0 h-4 w-4 text-neutral-400 dark:text-neutral-500 ms-auto"
       />
     </template>
   </UDropdownMenu>

@@ -2,7 +2,7 @@
 	<div class="my-4 lg:grid lg:grid-cols-2 lg:gap-x-16">
 		<div class="w-full rounded-xl border-2 border-neutral-200 dark:border-neutral-700 lg:mt-0 lg:col-start-1 lg:row-span-2 lg:self-start">
 			<div class="rounded-lg overflow-hidden">
-				<img class="w-full h-full object-center object-contain"
+				<img v-if="image" class="w-full h-full object-center object-contain"
           :src="image"
           :alt="item.name"
           width="400"
@@ -35,7 +35,7 @@
           <span>
             <a class="text-blue-500 hover:underline"
                 target="_blank"
-                :href="`https://beta.kodadot.xyz/${config.public.CHAIN}/u/${item.currentOwner}`">
+                :href="`https://beta.chaotic.art/${config.public.CHAIN}/u/${item.currentOwner}`">
               {{ shortAddress(item.currentOwner) }}
             </a>
           </span>
@@ -68,7 +68,7 @@
         {{ $t('action.add_to_cart') }}
       </UButton>
 
-      <hr class="border-1 border-neutral-200 dark:border-neutral-700">
+      <hr class="border border-neutral-200 dark:border-neutral-700">
 
       <div class="flex flex-wrap gap-4">
         <ShareButtons :product="item" />
