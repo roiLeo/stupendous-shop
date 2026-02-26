@@ -11,6 +11,8 @@
     "login": "Connexion",
     "create_nft": "Créez votre NFT",
     "clear": "Effacer",
+    "share": "Partager",
+    "sign_out": "Déconnexion",
     "undo": "Annuler"
   },
   "messages": {

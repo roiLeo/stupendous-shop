@@ -11,6 +11,8 @@
     "login": "Connect wallet",
     "create_nft": "Create your NFT",
     "clear": "Clear",
+    "share": "Share",
+    "sign_out": "Sign out",
     "undo": "Undo"
   },
   "messages": {

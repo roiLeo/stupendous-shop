@@ -38,12 +38,6 @@ const items = [
   ],
   [
     {
-      label: 'Settings',
-      icon: 'i-heroicons-cog-8-tooth',
-    },
-  ],
-  [
-    {
       label: 'Documentation',
       icon: 'i-heroicons-book-open',
       to: 'https://github.com/roiLeo/stupendous-shop#nft-shop'
@@ -55,7 +49,7 @@ const items = [
   ],
   [
     {
-      label: 'Sign out',
+      label: $t('action.sign_out'),
       icon: 'i-heroicons-arrow-left-on-rectangle',
       onClick: () => resetAccount()
     },

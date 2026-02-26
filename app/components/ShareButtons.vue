@@ -1,7 +1,7 @@
 <template>
   <a v-if="!isOpen" class="cursor-pointer flex mt-4 text-sm text-neutral-400 gap-2 items-center" @click="showShare">
     <UIcon name="i-heroicons-share" />
-    <span>Share</span>
+    <span>{{ $t('action.share') }}</span>
   </a>
   <div v-else class="cursor-pointer flex mt-4 text-sm text-neutral-400 gap-2 items-center">
     <!-- Twitter -->
