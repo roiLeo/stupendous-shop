@@ -1,6 +1,6 @@
 <template>
   <div class="relative flex flex-col">
-    <select class="appearance-none cursor-pointer p-2.5 text-neutral-900 bg-transparent focus:outline-primary-700 rounded-md hover:text-neutral-900 dark:hover:text-white hover:bg-neutral-50 dark:hover:bg-neutral-800" v-model="locale">
+    <select class="rounded-md font-medium inline-flex items-center disabled:cursor-not-allowed aria-disabled:cursor-not-allowed disabled:opacity-75 aria-disabled:opacity-75 transition-colors text-sm gap-2 text-default hover:bg-elevated active:bg-elevated focus:outline-none focus-visible:bg-elevated hover:disabled:bg-transparent dark:hover:disabled:bg-transparent hover:aria-disabled:bg-transparent dark:hover:aria-disabled:bg-transparent p-2" v-model="locale">
       <option v-for="{ code, name } in locales" :key="code" :value="code">
         {{ name }}
       </option>
@@ -9,10 +9,5 @@
 </template>
 
 <script lang="ts" setup>
-// const switchLocalePath = useSwitchLocalePath()
-const { locales, locale, setLocaleCookie } = useI18n()
-
-watch(locale, (newLocale) => {
-  setLocaleCookie(newLocale)
-})
+const { locales, locale } = useI18n()
 </script>
