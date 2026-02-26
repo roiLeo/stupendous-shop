@@ -13,7 +13,7 @@
     <template #body>
       <ul class="flex flex-col flex-1 gap-4 overflow-y-scroll">
         <li class="flex gap-4 items-center" v-for="item in cart" :key="item.id">
-          <img class="rounded-lg h-16 w-16" :src="useSanitizeUri(item.meta?.image)" :alt="item.name" :title="item.name" width="64" height="64">
+          <img class="rounded-lg h-16 w-16" :src="imageCache[item.id]" :alt="item.name" :title="item.name" width="64" height="64">
           <div class="flex-1">
             <div class="leading-tight">{{ item.name }}</div>
             <div class="flex mt-1 text-xs"><span class="font-semibold">{{ formatPrice(item.price) }}</span></div>
@@ -54,4 +54,14 @@ const cartStore = useCartStore()
 const cart = computed(() => cartStore.cart)
 const total = computed(() => cartStore.getCartTotal)
 const removeProductFromCart = (product: any) => cartStore.removeProductFromCart(product)
+
+const imageCache = reactive<Record<string, string>>({})
+
+watch(() => cart.value, async (items) => {
+  for (const item of items) {
+    if (!imageCache[item.id]) {
+      imageCache[item.id] = await useSanitizeUri(item.meta?.image) || ''
+    }
+  }
+}, { deep: true, immediate: true })
 </script>
