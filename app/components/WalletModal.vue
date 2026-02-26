@@ -62,21 +62,18 @@
         </p>
 
         <!-- Wallet accounts -->
-        <select
-          class="my-4 bg-neutral-50 border border-neutral-300 text-neutral-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full px-3 py-2 form-select appearance-none block"
-          v-model="selectedAccount"
-          @change="setAccount(selectedAccount)"
-        >
-          <option selected disabled>Select an account</option>
-          <option
-            v-for="option in walletAccounts"
-            :key="option.address"
-            :value="option.address"
-          >
-            <b v-if="option.name">{{ option.name }}:</b>
-            {{ shortAddress(option.address) }}
-          </option>
-        </select>
+        <USelectMenu v-model="selectedAccount" @update:model-value="setAccount(selectedAccount)" class="w-full" :items="walletAccounts" value-key="address">
+          <template #item-leading="{ item }">
+            <Polkadot size="24" theme="polkadot" :address="item.address" class="mx-2" />
+          </template>
+          <template #item-label="{ item }">
+            <div class="flex flex-col">
+              <div v-if="item.name" class="font-bold">{{ item.name }}</div>
+
+              <div>{{ item.address }}</div>
+            </div>
+          </template>
+        </USelectMenu>
       </div>
     </template>
 
