@@ -8,6 +8,7 @@
           width="400"
           height="400"
 				/>
+        <USkeleton v-else class="aspect-square w-full" />
 			</div>
 		</div>
 		<div>
@@ -17,11 +18,6 @@
 						<h1 class="text-3xl sm:text-4xl font-bold text-neutral-900 dark:text-white tracking-tight">
 							{{ item.name }}
 						</h1>
-            <div class="mt-2 text-neutral-400">
-              <UTooltip :text="new Date(item.createdAt).toLocaleDateString()">
-                <time>Minted {{ timeAgo(item.createdAt) }} ago</time>
-              </UTooltip>
-            </div>
 					</hgroup>
           <UBadge color="neutral" size="lg" variant="solid" v-if="isAvailable">
             {{ formatPrice(item.price) }}
@@ -84,7 +80,8 @@ const props = defineProps(['item'])
 const cartStore = useCartStore()
 const config = useRuntimeConfig()
 
-const image = await useSanitizeUri(props.item.meta?.image)
+const image = ref<string | null>(null)
+useSanitizeUri(props.item.meta?.image).then((u) => (image.value = u))
 const description = ref(props.item.meta?.description)
 const isAvailable = ref(props.item.price !== '0')
 

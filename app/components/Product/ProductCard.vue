@@ -8,6 +8,7 @@
           :width="300"
           :height="300"
         />
+        <USkeleton v-else class="aspect-square w-full rounded-md" />
       </nuxt-link>
 
       <WishlistButton
@@ -48,7 +49,8 @@
 
 <script lang="ts" setup>
 const props = defineProps(['item'])
-const image = await useSanitizeUri(props.item.meta?.image)
+const image = ref<string | null>(null)
+useSanitizeUri(props.item.meta?.image).then((u) => (image.value = u))
 const price = ref(props.item.price)
 const description = ref(props.item.meta?.description)
 const cartStore = useCartStore()

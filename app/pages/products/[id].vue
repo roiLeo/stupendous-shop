@@ -12,18 +12,18 @@
       </UButton>
 		</div>
 
-		<ProductCardDetails :item="item" />
+		<ProductCardDetailsSkeleton v-if="status === 'pending' || status === 'idle'" />
+		<UAlert v-else-if="!item" color="error" variant="subtle" title="NFT not found" />
+		<ProductCardDetails v-else :item="item" />
 	</div>
 </template>
 
 <script setup lang="ts">
-import { getClient, extendFields } from '@kodadot1/uniquery'
-
 const route = useRoute()
-const id = computed(() => route.params.id)
-const config = useRuntimeConfig()
-const client = getClient(config.public.CHAIN)
-const query = client.itemById(String(id.value), extendFields(['meta', 'price']))
-const { data } = await client.fetch(query)
-const item = ref(data.item)
+const { chain, collectionId } = useCollectionSource()
+
+const { data, status } = useFetch(`/api/collection/${collectionId}/nfts/${route.params.id}`, {
+  query: { chain },
+})
+const item = computed(() => (data.value ? toProduct(data.value) : null))
 </script>

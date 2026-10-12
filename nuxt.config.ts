@@ -30,10 +30,25 @@ export default defineNuxtConfig({
   },
 
   runtimeConfig: {
+    polkadotHubWsUrl: 'wss://polkadot-asset-hub-rpc.polkadot.io',
+    kusamaHubWsUrl:   'wss://kusama-asset-hub-rpc.polkadot.io',
     public: {
       CHAIN: process.env.CHAIN,
       COLLECTION_ID: process.env.COLLECTION_ID,
     },
+  },
+
+  nitro: {
+    // IPFS metadata is immutable per CID → persist it across restarts.
+    // Point `base` at a mounted volume in production.
+    storage: {
+      ipfs: { driver: 'fs', base: './.data/ipfs' },
+    },
+  },
+
+  vite: {
+    // PAPI uses top-level await — required for Smoldot / light-client workers
+    build: { target: 'esnext' },
   },
 
   compatibilityDate: '2025-01-23',

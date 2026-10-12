@@ -1,8 +1,5 @@
 const GATEWAYS = [
   'https://bucket.chaotic.art/ipfs/',
-  'https://cloudflare-ipfs.com/ipfs/',
-  'https://ipfs.io/ipfs/',
-  'https://gateway.pinata.cloud/ipfs/',
 ]
 
 const TEST_CID = 'QmYwAPJzv5CZsnAzt8auVZRnJv3H8n7ZL8zR6xk1H5Z6kH'

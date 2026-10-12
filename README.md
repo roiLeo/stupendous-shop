@@ -7,7 +7,7 @@
 ## Stack
 
 - 🦾 [Typescript](https://www.typescriptlang.org/)
-- 🚀 [Uniquery](https://github.com/kodadot/uniquery)
+- 🚀 [polkadot-api](https://papi.how) (direct Asset Hub queries)
 - 💚 [Nuxt](https://nuxt.com/) & [NuxtUI](https://ui.nuxt.com/)
 - 🌊 [Tailwind CSS](https://tailwindcss.com/)
 - ✨ [Eslint](https://eslint.org/) & [Prettier](https://prettier.io/)

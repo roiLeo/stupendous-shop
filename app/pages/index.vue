@@ -1,32 +1,28 @@
 <template>
 	<div>
+		<CollectionHeader />
 
-    <CollectionHeader />
-
-    <!-- TODO: search & filters  -->
-		<!-- <form class="py-5" @submit.prevent="submitInput">
-      <SearchInput v-model="inputCollectionId" />
-		</form> -->
-
-		<!-- {{ items }} -->
 		<div class="grid lg:grid-cols-5 md:grid-cols-4 grid-cols-2 gap-4 py-4">
-			<ProductCard v-for="item in items" :key="item.id" :item="item" />
+			<template v-if="status === 'pending' || !data">
+				<ProductCardSkeleton v-for="n in 10" :key="n" />
+			</template>
+			<ProductCard v-else v-for="item in items" :key="item.id" :item="item" />
 		</div>
+
+		<UPagination v-if="total > pageSize" v-model:page="page" :total="total" :items-per-page="pageSize" />
 	</div>
 </template>
 
 <script setup lang="ts">
-import { useProductsStore } from '@/stores/products'
+const { chain, collectionId } = useCollectionSource()
+const pageSize = 20
+const page = ref(1)
 
-const productsStore = useProductsStore()
-const inputCollectionId = ref('') // 945672150
+const { data, status } = useFetch(`/api/collection/${collectionId}/nfts`, {
+  query: { chain, page, pageSize },
+  key: 'collection-nfts',
+})
 
-await callOnce('products', () => productsStore.fetchItems())
-
-const items = computed(() => productsStore.getItems)
-
-const submitInput = async () => {
-  productsStore.setCollectionId(inputCollectionId.value)
-  await useAsyncData('products', () => productsStore.fetchItems())
-}
+const total = computed(() => data.value?.total ?? 0)
+const items = computed(() => (data.value?.nfts ?? []).map(toProduct))
 </script>
